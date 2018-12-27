@@ -1,11 +1,13 @@
 <template>
     <div id="app">
-        <v-button class="warning"/>
+        <router-view></router-view>
     </div>
 </template>
 
 <script>
-export default {};
+export default {
+    created() {}
+};
 </script>
 
 <style>

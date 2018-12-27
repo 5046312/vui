@@ -1,5 +1,7 @@
 <template>
-    <button :class="className" @click="$emit('click')">btn</button>
+    <button :class="className" @click="$emit('click')">
+        <slot></slot>
+    </button>
 </template>
 <script>
 export default {
