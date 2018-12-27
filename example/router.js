@@ -11,6 +11,7 @@ export default new router({
         {
             path: '/components',
             component: () => import("@/views/components/layout"),
+            redirect: '/components/button',
             children: [
                 { meta: { title: '组件' }, path: 'button', component: () => import("@/views/components/button") },
             ]
