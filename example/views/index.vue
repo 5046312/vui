@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>index</div>
-        <v-button @click="$router.push('/components')">组件</v-button>
+        <v-button @click="$router.push('/control')">start</v-button>
     </div>
 </template>
 <script>

@@ -16,6 +16,12 @@ body,
 #app {
     height: 100%;
     width: 100%;
+    color: #333;
+    font-size: 16px;
+    min-width: 1100px;
+    overflow-x: auto;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+    font-family: PingFang SC, Helvetica Neue, Arial, sans-serif;
 }
-
 </style>

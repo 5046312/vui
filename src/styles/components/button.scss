@@ -1,4 +1,4 @@
-@import '../common/variables.scss';
+@import '../common/var.scss';
 
 .#{$prefix}-button{
     padding: 8px 16px;
@@ -12,9 +12,9 @@
     }
     
     &.primary{
-        background: #007bff;
+        background: #4dabf7;
         &:hover{
-            background: #0069d9;
+            background: #007bff;
         }
     }
 
