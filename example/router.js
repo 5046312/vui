@@ -37,7 +37,7 @@ export default new router({
         {
             path: '/control',
             component: () => import("@/views/layout"),
-            redirect: '/control/button',
+            redirect: '/control/icon',
             children: routerList.control.children
         },
 
