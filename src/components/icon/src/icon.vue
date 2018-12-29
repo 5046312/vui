@@ -5,14 +5,14 @@
 </template>
 <script>
 export default {
-    name: "v-button",
+    name: "v-icon",
     data() {
         return {};
     },
     methods: {},
     computed: {
         className() {
-            return "vui-button";
+            return "vui-icon";
         }
     }
 };
