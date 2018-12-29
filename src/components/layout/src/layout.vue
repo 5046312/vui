@@ -1,22 +1,32 @@
 <template>
-    <button :class="className" @click="$emit('click')">
-        <slot></slot>
-    </button>
+    <div class="vui-layout">
+        <slot name="header"></slot>
+        <div class="content">
+            <slot></slot>
+        </div>
+        <slot name="footer"></slot>
+    </div>
 </template>
 <script>
 export default {
-    name: "v-button",
+    name: "v-layout",
     data() {
         return {};
     },
     methods: {},
     computed: {
-        className() {
-            return "vui-button";
-        }
     }
 };
 </script>
 <style lang="scss" scoped>
-@import "../../../styles/components/button.scss";
+@import '../../../styles/base.scss';
+.vui-layout{
+    display: flex;
+    flex-direction: column;
+    .content{
+        overflow-y: auto;
+        flex: 1;
+        @include scrollbar();
+    }
+}
 </style>

@@ -24,25 +24,30 @@ import { routerList } from "@/router";
 export default {
     data() {
         return {
-            list: {}
         };
     },
-    created() {
-        this.list = routerList;
+    computed: {
+        list(){
+            return routerList
+        }
     }
 };
 </script>
 <style lang="scss" scoped>
 @mixin scrollbar() {
+    /*滚动条整体样式*/
     &::-webkit-scrollbar {
-        /*滚动条整体样式*/
-        width: 3px; /*高宽分别对应横竖滚动条的尺寸*/
-        height: 3px;
+        width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
+        height: 4px;
     }
+    
+    /*滚动条里面小方块*/
     &::-webkit-scrollbar-thumb {
-        /*滚动条里面小方块*/
-        border-radius: 3px;
-        background: rgba(60, 60, 60, 0.2);
+        border-radius: 4px;
+        background: rgba(160, 160, 160, .2);
+        &:hover{
+            background-color: rgba(160, 160, 160, .6);
+        }
     }
     /*滚动条里面轨道*/
     &::-webkit-scrollbar-track {
@@ -99,7 +104,7 @@ export default {
     // router-view
     .content {
         flex: 1;
-        overflow-y: scroll;
+        overflow-y: hidden;
         &:hover{
             @include scrollbar();
         }

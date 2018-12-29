@@ -6,7 +6,7 @@ import { Layout } from './components/layout'
 const install = Vue => {
     Vue.component(Icon.name, Icon)
     Vue.component(Button.name, Button)
-    Vue.component(Layout.name, Icon)
+    Vue.component(Layout.name, Layout)
 }
 
 export default {

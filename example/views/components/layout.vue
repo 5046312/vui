@@ -1,11 +1,11 @@
 <template>
-    <div >
-    </div>
+    <v-layout>
+        布局 
+    </v-layout>
 </template>
 <script>
 export default {
-    components:{
-    }
+    
 }
 </script>
 <style lang="scss" scoped>
