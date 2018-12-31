@@ -1,10 +1,13 @@
 <template>
   <div class="vui-code-panel">
-    <div class="title" v-text="title" v-if="title"/>
     <div class="panel">
-      <div class="desc" v-text="desc" v-if="title"/>
-      <div v-html="code" class="code"></div>
-      <div>
+      <div class="left" ref="left">
+        <div class="desc" v-text="desc" v-if="desc"/>
+        <div class="show-style">
+          <slot></slot>
+        </div>
+      </div>
+      <div class="right">
         <div :style="{height: height}" class="origin-code">
           <v-code :code="code" ref="origin"></v-code>
         </div>
@@ -18,21 +21,24 @@ export default {
   name: "v-codepanel",
   props: {
     code: String,
-    desc: String,
-    title: String
+    desc: String
   },
   data() {
     return {
-      show: false
+      show: false,
+      leftHeight: 0
     };
   },
-  
   watch: {},
-  mounted() {},
+  mounted() {
+    this.leftHeight = this.$refs.left.offsetHeight - 40;
+  },
   methods: {},
   computed: {
     height() {
-      return this.show ? this.$refs.origin.$el.offsetHeight + "px" : 0;
+      return (
+        (this.show ? this.$refs.origin.$el.offsetHeight : this.leftHeight) + "px"
+      );
     }
   }
 };

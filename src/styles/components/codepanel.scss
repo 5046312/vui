@@ -7,59 +7,41 @@
         transition: all .7s;
         border-radius: 3px;
         cursor: default;
-        .desc{
-            border: 1px solid #eee;
-            border-bottom: 0;
-            padding: 30px 20px 20px;
+        display: flex;
+        border: 1px solid #eee;
+        &>.left, &>.right{
+            width: 50%;
         }
-        .code{
+        .desc{
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .show-style{
             padding: 30px 20px;
-            border: 1px solid #eee;
-            border-bottom: 0;
         }
         .origin-code{
             transition: all .5s;
             box-sizing: border-box;
             background: #eeeeff;
             overflow: hidden;
-            &>div{
-                padding: 30px 20px;
-                &:hover{
-                    background: #eee;
-                }
-            }
-            &.hide{
-            }
         }
         // 展开按钮
         .show-control{
             height: 40px;
-            background: #70a1ff;
+            background: #1e90ff;
             transition: all .7s;
             text-align: center;
             line-height: 40px;
             color: #fff;
             font-size: 14px;
             &:hover{
-                background: #1e90ff;
+                background: #70a1ff;
             }
         }
         &:hover{
             box-shadow: 2px 2px 10px rgba(60,60,60, .3);
+            border: 1px solid rgba(0,0,0, .1)
         }
     }
-    .title{
-        position: absolute;
-        top: 10px;
-        padding:0 10px;
-        background: #fff;
-        height: 24px;
-        line-height: 24px;
-        font-size: 17px;
-        left: 60px;
-    }
-
-
-
     
 }
