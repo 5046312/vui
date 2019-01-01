@@ -1,22 +1,18 @@
 <template>
-    <button :class="className" @click="$emit('click')">
+    <button id="vui-button" :class="type" @click="$emit('click')">
         <slot></slot>
     </button>
 </template>
 <script>
 export default {
     name: "v-button",
-    data() {
-        return {};
-    },
-    methods: {},
-    computed: {
-        className() {
-            return "vui-button";
+    props:{
+        type: {
+            default: 'default'
         }
-    }
+    },
 };
 </script>
 <style lang="scss" scoped>
-@import "../../../styles/components/button.scss";
+@import "../../../styles/components/button";
 </style>

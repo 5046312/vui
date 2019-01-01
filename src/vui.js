@@ -4,6 +4,8 @@ import { Button } from './components/button'
 import { Layout } from './components/layout'
 import { Code } from './components/code'
 import { CodePanel } from './components/codepanel'
+import Toast from './components/toast'
+import Mask from './components/mask'
 
 const install = Vue => {
     Vue.component(Icon.name, Icon)

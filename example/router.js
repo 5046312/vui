@@ -34,7 +34,8 @@ export const routerList = {
     common: {
         title: '常用',
         children: [
-            { meta: { title: '输入框' }, path: 'button', component: () => import("@/views/components/button") },
+            { meta: { title: '遮罩' }, path: 'mask', component: () => import("@/views/components/mask") },
+            { meta: { title: '吐司' }, path: 'toast', component: () => import("@/views/components/toast") },
         ]
     },
 }
@@ -59,6 +60,14 @@ export default new router({
             component: () => import("@/views/layout"),
             redirect: 'layout/button',
             children: routerList.layout.children
+        },
+
+        // 常用
+        {
+            path: '/common',
+            component: () => import("@/views/layout"),
+            redirect: 'common/mask',
+            children: routerList.common.children
         },
 
         { path: '*', component: () => import('@/views/404') },

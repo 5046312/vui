@@ -1,6 +1,6 @@
-@import '../common/var.scss';
+@import '../common/var';
 
-.#{$prefix}-code-panel{
+#vui-code-panel{
     position: relative;
     padding: 20px;
     .panel{
@@ -20,10 +20,12 @@
             padding: 30px 20px;
         }
         .origin-code{
-            transition: all .5s;
             box-sizing: border-box;
             background: #eeeeff;
             overflow: hidden;
+            &.transition{
+                transition: all .5s;
+            }
         }
         // 展开按钮
         .show-control{

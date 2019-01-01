@@ -1,32 +1,53 @@
-@import '../common/var.scss';
-
-.#{$prefix}-button{
+@import '../common/var';
+@mixin activeColor($color){
+    &:active{
+        background: rgba($color, .7);
+    }
+}
+#vui-button{
     padding: 8px 16px;
     background: #eee;
+    color: $font;
     border: 0;
     border-radius: 3px;
     outline:none;
     cursor: pointer;
-    &:hover{
-        background: #ddd;
-    }
+    transition: all .1s;
+    margin-left: 5px;
+    margin-right: 5px;
+    @include activeColor(#eee);
     
     &.primary{
-        background: #4dabf7;
-        &:hover{
-            background: #007bff;
-        }
+        background: $primary;
+        color: #fff;
+        @include activeColor($primary);
     }
 
     &.success{
-        background: #28a745;
+        background: $success;
+        color: #fff;
+        @include activeColor($success);
     }
 
     &.danger{
-        background: #dc3545;
+        background: $danger;
+        color: #fff;
+        @include activeColor($danger);
     }
 
     &.warning{
-        background: #ffc107;
+        background: $warn;
+        color: #fff;
+        @include activeColor($warn);
+    }
+    &.error{
+        background: $error;
+        color: #fff;
+        @include activeColor($error);
+    }
+    &.disable{
+        background: $disable;
+        color: #f1f2f6;
+        cursor: not-allowed; 
     }
 }

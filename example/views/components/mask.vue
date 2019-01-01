@@ -1,11 +1,11 @@
 <template>
   <v-layout>
     <div style="padding: 50px 100px;">
-      <v-codepanel :code="code" desc="基础说明部分">
-        <Button>An info prompt</Button>
-        <Button type="success">A success prompt</Button>
-        <Button type="warning">A warning prompt</Button>
-        <Button type="error">An error prompt</Button>
+      <v-codepanel :code="code">
+        <div slot='desc'>
+          基础说明部分
+        </div>
+        <v-button @click='showMask'>弹出一个Mask遮罩</v-button>
       </v-codepanel>
     </div>
   </v-layout>
@@ -18,6 +18,11 @@ export default {
     return {
       code: code.layout
     };
+  },
+  methods: {
+    showMask() {
+      this.$mask(.5, 999)
+    }
   }
 };
 </script>
