@@ -10,7 +10,7 @@
 </template>
 <script>
 import hljs from "highlight.js";
-import Clipboard from "Clipboard";
+import Clipboard from "clipboard";
 import "highlight.js/styles/googlecode.css";
 export default {
   name: "v-code",

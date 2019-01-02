@@ -8,6 +8,7 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "clipboard": "^2.0.4",
     "highlight.js": "^9.13.1",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
