@@ -1,20 +1,28 @@
 <template>
-  <div>
-    
-  </div>
+    <div id="vui-toast">
+        <div class="tip" :style="{opacity}">{{msg}}</div>
+    </div>
 </template>
 <script>
 export default {
-  name: "v-toast",
-  data() {
-    return {};
-  },
-  methods: {
-    close(){
-      console.log('close')
+    name: "v-toast",
+    data() {
+        return {
+            msg: "",
+            opacity: 0,
+        };
+    },
+    methods: {},
+    computed: {},
+    created() {
+        setTimeout(() => {
+            this.opacity = 1
+        }, 2000)
+    },
+    destroyed(){
+        alert(123)
+        this.opacity = 0
     }
-  },
-  computed: {}
 };
 </script>
 <style lang="scss" scoped>

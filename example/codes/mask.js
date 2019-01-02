@@ -1,13 +1,13 @@
 let code = {}
 code.base = `
 <template>
-    <v-button @click="showToast">弹出一个Toast</v-button>
+    <v-button @click='showMask'>弹出一个Mask遮罩</v-button>
 </template>
 <script>
     export default {
         methods: {
-            showToast() {
-                this.$toast("弹出一个Toast");
+            showMask() {
+                this.$mask(.5, 999)
             }
         }
     }

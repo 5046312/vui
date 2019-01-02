@@ -1,7 +1,7 @@
 <template>
   <v-layout>
     <div style="padding: 50px 100px;">
-      <v-codepanel :code="code">
+      <v-codepanel :code="base">
         <div slot='desc'>
           基础说明部分
         </div>
@@ -11,12 +11,12 @@
   </v-layout>
 </template>
 <script>
-import code from "@/codes/layout";
+import code from "@/codes/mask";
 export default {
   components: {},
   data() {
     return {
-      code: code.layout
+      base: code.base
     };
   },
   methods: {

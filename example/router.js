@@ -28,7 +28,7 @@ export const routerList = {
     form: {
         title: '表单',
         children: [
-            { meta: { title: '输入框' }, path: 'button', component: () => import("@/views/components/button") },
+            { meta: { title: '输入框' }, path: 'input', component: () => import("@/views/components/button") },
         ]
     },
     common: {
@@ -36,6 +36,10 @@ export const routerList = {
         children: [
             { meta: { title: '遮罩' }, path: 'mask', component: () => import("@/views/components/mask") },
             { meta: { title: '吐司' }, path: 'toast', component: () => import("@/views/components/toast") },
+            { meta: { title: '警告' }, path: 'alert', component: () => import("@/views/components/alert") },
+            { meta: { title: '加载' }, path: 'loading', component: () => import("@/views/components/loading") },
+            { meta: { title: '确认' }, path: 'confirm', component: () => import("@/views/components/confirm") },
+            { meta: { title: '模态框' }, path: 'modal', component: () => import("@/views/components/modal") },
         ]
     },
 }

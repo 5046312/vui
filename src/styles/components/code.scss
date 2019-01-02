@@ -8,13 +8,15 @@
         position: absolute;
         top: 10px;
         right: 20px;
-
+        // 复制按钮
         .copy{
             border: 1px solid $primary;
             background: #fff;
-            font-size: 14px;
-            border-radius: 4px;
-            padding: 5px 8px;
+            font-size: 12px;
+            line-height: 20px;
+            border-radius: 5px;
+            padding: 0 8px;
+            cursor: pointer;
         }
     }
     .hljs-keyword,
@@ -31,6 +33,7 @@
       overflow-x: auto;
       color: $font;
       -webkit-text-size-adjust: none;
+      padding: 20px;
     }
     .hljs-doctype {
       color: #999;
@@ -77,9 +80,9 @@
       color: #fc1e70;
     }
     pre {
-      padding: 20px;
       margin: 0;
       display: flex;
+      width: 100%;
     }
     code {
       display: inline-block;

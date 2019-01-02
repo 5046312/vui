@@ -4,8 +4,13 @@ import { Button } from './components/button'
 import { Layout } from './components/layout'
 import { Code } from './components/code'
 import { CodePanel } from './components/codepanel'
-import Toast from './components/toast'
 import Mask from './components/mask'
+import Toast from './components/toast'
+import Alert from './components/alert'
+import Loading from './components/loading'
+import Confirm from './components/confirm'
+import Modal from './components/modal'
+
 
 const install = Vue => {
     Vue.component(Icon.name, Icon)

@@ -1,5 +1,5 @@
-@import '../common/var';
-#vui-toast{
+@import "../common/var";
+#vui-loading{
     position: absolute;
     left: 0;
     right: 0;
@@ -15,6 +15,5 @@
         color: #fff;
         background: rgba(0,0,0, .6);
         max-width: 200px;
-        transition: all 1s;
     }
 }
