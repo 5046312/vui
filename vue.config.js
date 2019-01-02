@@ -1,6 +1,7 @@
 const path = require('path')
 const resolve = dir => path.join(__dirname, dir)
 module.exports = {
+    baseUrl: './',
     outputDir: 'docs',
     // 配置路径别名
     chainWebpack: config => {
