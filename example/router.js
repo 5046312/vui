@@ -34,6 +34,7 @@ export const routerList = {
     common: {
         title: '常用',
         children: [
+            { meta: { title: '过度' }, path: 'transition', component: () => import("@/views/components/transition") },
             { meta: { title: '遮罩' }, path: 'mask', component: () => import("@/views/components/mask") },
             { meta: { title: '吐司' }, path: 'toast', component: () => import("@/views/components/toast") },
             { meta: { title: '警告' }, path: 'alert', component: () => import("@/views/components/alert") },

@@ -1,29 +1,32 @@
 <template>
-  <v-layout>
-    <div style="padding: 50px 100px;">
-      <v-codepanel :code="base">
-        <div slot='desc'>
-          基础说明部分
+    <v-layout>
+        <div style="padding: 50px 100px;">
+            <v-codepanel :code="base">
+                <div slot="desc">
+                    单例模式，全局只会存在唯一的mask，所以多次调用也无需担心
+                </div>
+                <v-button @click="showMaskSchedule">弹出一个Mask遮罩，1s后关闭</v-button>
+            </v-codepanel>
         </div>
-        <v-button @click='showMask'>弹出一个Mask遮罩</v-button>
-      </v-codepanel>
-    </div>
-  </v-layout>
+    </v-layout>
 </template>
 <script>
 import code from "@/codes/mask";
 export default {
-  components: {},
-  data() {
-    return {
-      base: code.base
-    };
-  },
-  methods: {
-    showMask() {
-      this.$mask(.5, 999)
+    components: {},
+    data() {
+        return {
+            base: code.base
+        };
+    },
+    methods: {
+        showMaskSchedule(){
+            this.$mask.show();
+            setTimeout(() => {
+                this.$mask.close();
+            }, 2000);
+        }
     }
-  }
 };
 </script>
 <style lang="scss" scoped>

@@ -13,15 +13,14 @@ function getInstance(data) {
     }
     instance.msg = data.msg
     instance.duration = data.duration
-    console.log(instance)
     return instance;
 }
 
-Vue.prototype.$toast = function (msg = 'toast', duration = '2') {
-    getInstance({msg, duration}).show()
+Vue.prototype.$toast = (msg = 'toast', duration = '2') => {
+    getInstance({ msg, duration }).show = true
     clearTimeout(timer)
     timer = setTimeout(() => {
         clearTimeout(timer);
-        instance.hide()
+        // instance.show = false
     }, instance.duration + 100);
 };

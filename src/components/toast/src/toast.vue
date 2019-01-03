@@ -1,7 +1,9 @@
 <template>
-    <div id="vui-toast">
-        <div class="tip" :style="{opacity}">{{msg}}</div>
-    </div>
+    <v-transition name="fade">
+        <div id="vui-toast" v-show="show" @click="show = false">
+            <div class="tip">{{msg}}</div>
+        </div>
+    </v-transition>
 </template>
 <script>
 export default {
@@ -9,20 +11,13 @@ export default {
     data() {
         return {
             msg: "",
-            opacity: 0,
+            show: false
         };
     },
     methods: {},
     computed: {},
-    created() {
-        setTimeout(() => {
-            this.opacity = 1
-        }, 2000)
-    },
-    destroyed(){
-        alert(123)
-        this.opacity = 0
-    }
+    created() {},
+    destroyed() {}
 };
 </script>
 <style lang="scss" scoped>

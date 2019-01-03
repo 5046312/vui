@@ -34,7 +34,7 @@ export default {
   watch: {
     show() {
       this.transition = true;
-    }
+    },
   },
   mounted() {
     this.leftHeight =

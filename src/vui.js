@@ -4,6 +4,7 @@ import { Button } from './components/button'
 import { Layout } from './components/layout'
 import { Code } from './components/code'
 import { CodePanel } from './components/codepanel'
+import Transition from './components/transition'
 import Mask from './components/mask'
 import Toast from './components/toast'
 import Alert from './components/alert'
@@ -18,6 +19,7 @@ const install = Vue => {
     Vue.component(Layout.name, Layout)
     Vue.component(Code.name, Code)
     Vue.component(CodePanel.name, CodePanel)
+    Vue.component(Transition.name, Transition)
 }
 
 export default {

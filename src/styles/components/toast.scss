@@ -1,6 +1,6 @@
 @import '../common/var';
 #vui-toast{
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     top: 0;
@@ -10,6 +10,7 @@
     justify-content: center;
     user-select: none;
     cursor: default;
+    overflow: hidden;
     &>.tip{
         padding: 15px 25px;
         color: #fff;
