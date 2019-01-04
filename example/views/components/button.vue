@@ -1,7 +1,7 @@
 <template>
   <v-layout>
     <div class='main-contain'>
-      <v-codepanel :code="code">
+      <v-codepanel :code="base">
         <div slot="desc">
           基础说明部分
         </div>
@@ -15,16 +15,53 @@
             <v-button type="disable">Disable</v-button>
         </div>
       </v-codepanel>
+      
+      <v-codepanel :code="click">
+        <div slot="desc">
+          基础说明部分
+        </div>
+        <div class='buttonWrap'>
+            <v-button>Default</v-button>
+            <v-button type="primary">Primary</v-button>
+            <v-button type="danger">Danger</v-button>
+            <v-button type="warning">Warning</v-button>
+            <v-button type="success">Success</v-button>
+            <v-button type="error">Error</v-button>
+            <v-button type="disable">Disable</v-button>
+            <v-button>Default</v-button>
+            <v-button type="primary">Primary</v-button>
+            <v-button type="danger">Danger</v-button>
+            <v-button type="warning">Warning</v-button>
+            <v-button type="success">Success</v-button>
+            <v-button type="error">Error</v-button>
+            <v-button type="disable">Disable</v-button>
+            <v-button>Default</v-button>
+            <v-button type="primary">Primary</v-button>
+            <v-button type="danger">Danger</v-button>
+            <v-button type="warning">Warning</v-button>
+            <v-button type="success">Success</v-button>
+            <v-button type="error">Error</v-button>
+            <v-button type="disable">Disable</v-button>
+            <v-button>Default</v-button>
+            <v-button type="primary">Primary</v-button>
+            <v-button type="danger">Danger</v-button>
+            <v-button type="warning">Warning</v-button>
+            <v-button type="success">Success</v-button>
+            <v-button type="error">Error</v-button>
+            <v-button type="disable">Disable</v-button>
+        </div>
+      </v-codepanel>
     </div>
   </v-layout>
 </template>
 <script>
-import code from "@/codes/layout";
+import code from "@/codes/button";
 export default {
   components: {},
   data() {
     return {
-      code: code.layout
+      base: code.base,
+      click: code.click
     };
   }
 };

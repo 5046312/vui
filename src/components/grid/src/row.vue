@@ -19,6 +19,7 @@ export default {
             default: 0
         },
         // justify-content
+        // start|end|center|between|around
         justify: {
             default: "start"
         },
@@ -37,8 +38,6 @@ export default {
         },
         // 对其方式
         _flex_content() {
-            // 5种可能
-            // flex-start|flex-end|center|space-between|space-around
             let value;
             switch (this.justify) {
                 case "end":
@@ -60,22 +59,13 @@ export default {
         },
         // 垂直对其方式
         _align_items() {
-            // stretch|center|flex-start|flex-end|baseline
+            // top|center|bottom
             let value;
             switch (this.align) {
-                case "stretch":
-                    value = "stretch";
-                    break;
                 case "center":
                     value = "center";
                     break;
-                case "baseline":
-                    value = "baseline";
-                    break;
-                case "start":
-                    value = "flex-start";
-                    break;
-                case "end":
+                case "bottom":
                     value = "flex-end";
                     break;
                 default:

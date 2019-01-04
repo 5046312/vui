@@ -120,6 +120,20 @@
                 <div slot="desc">
                     <div>v-row组件支持不同的v-col垂直方向对其方式 align</div>
                 </div>
+                <v-row align="top" class="block-bg">
+                    <v-col width="3">
+                        <div class="block blue" style="height: 100px;">width = 3</div>
+                    </v-col>
+                    <v-col width="3">
+                        <div class="block red" style="height: 40px;">width = 3</div>
+                    </v-col>
+                    <v-col width="3">
+                        <div class="block blue" style="height: 70px;">width = 3</div>
+                    </v-col>
+                </v-row>
+
+                <div style="height: 20px;"></div>
+
                 <v-row align="center" class="block-bg">
                     <v-col width="3">
                         <div class="block blue" style="height: 100px;">width = 3</div>
@@ -134,7 +148,7 @@
 
                 <div style="height: 20px;"></div>
 
-                <v-row align="end" class="block-bg">
+                <v-row align="bottom" class="block-bg">
                     <v-col width="3">
                         <div class="block blue" style="height: 100px;">width = 3</div>
                     </v-col>
