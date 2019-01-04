@@ -25,7 +25,7 @@ body{
 #app{
     height: 100%;
     .main-contain{
-        padding: 0 20px;
+        padding: 0;
     }
 }
 </style>

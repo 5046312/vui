@@ -1,5 +1,5 @@
 <template>
-    <div id="vui-col" :style="{width: _width, paddingLeft: padding, paddingRight: padding}">
+    <div id="vui-col" :style="{width: _width, paddingLeft: padding, paddingRight: padding, order, marginLeft: _offset}">
         <div>
             <slot></slot>
         </div>
@@ -12,6 +12,12 @@ export default {
         // 所占份数，共12份
         width: {
             default: 12
+        },
+        order: {
+            default: 0,
+        },
+        offset: {
+            default: 0,
         }
     },
     data() {
@@ -26,6 +32,10 @@ export default {
         // 获取父组件间隔 / 2
         padding() {
             return this.$parent.gutter / 2 + "px";
+        },
+        // 向右偏移宽度
+        _offset(){
+            return ((this.offset / 12) * 100).toFixed(20) + "%";
         }
     }
 };
