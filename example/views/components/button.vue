@@ -1,6 +1,6 @@
 <template>
   <v-layout>
-    <div style="padding: 50px 100px;">
+    <div class='main-contain'>
       <v-codepanel :code="code">
         <div slot="desc">
           基础说明部分

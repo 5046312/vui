@@ -1,0 +1,15 @@
+@import "../common/var";
+#vui-row{
+    display: flex;
+    width: 100%;
+    position: relative;
+    box-sizing: border-box;
+    #vui-col{
+        &:first-child{
+            padding-left: 0 !important;
+        }
+        &:last-child{
+            padding-right: 0 !important;
+        }
+    }
+}

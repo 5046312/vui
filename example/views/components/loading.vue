@@ -1,6 +1,6 @@
 <template>
     <v-layout>
-        <div style="padding: 50px 100px;">
+        <div class='main-contain'>
             <v-codepanel :code="base">
                 <div slot="desc">Toast 吐司</div>
                 <v-button @click="showToast">弹出一个Toast</v-button>

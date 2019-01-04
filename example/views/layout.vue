@@ -103,7 +103,7 @@ export default {
     .content {
         flex: 1;
         overflow: hidden;
-        background: #eee;
+        background: #fff;
         &:hover {
             @include scrollbar();
         }

@@ -1,6 +1,6 @@
 <template>
   <v-layout>
-    <div style="padding: 50px 100px;">
+    <div class='main-contain'>
       <v-codepanel :code="code" desc="基础说明部分">
         <Button>An info prompt</Button>
         <Button type="success">A success prompt</Button>

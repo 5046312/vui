@@ -1,2 +1,2 @@
 import Layout from './src/layout';
-export { Layout };
+export default Layout;

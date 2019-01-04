@@ -10,7 +10,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang='scss' scope>
 html,
 body{
     height: 100%;
@@ -24,5 +24,8 @@ body{
 }
 #app{
     height: 100%;
+    .main-contain{
+        padding: 0 20px;
+    }
 }
 </style>

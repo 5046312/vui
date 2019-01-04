@@ -1,6 +1,6 @@
 <template>
     <v-layout>
-        <div style="padding: 50px;">
+        <div class='main-contain'>
             <v-codepanel :code="base">
                 <div slot="desc">
                     <div>对vue的transition组件和animate.css进行了简单封装。</div>

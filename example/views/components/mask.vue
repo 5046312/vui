@@ -1,6 +1,6 @@
 <template>
     <v-layout>
-        <div style="padding: 50px 100px;">
+        <div class='main-contain'>
             <v-codepanel :code="base">
                 <div slot="desc">
                     单例模式，全局只会存在唯一的mask，所以多次调用也无需担心
