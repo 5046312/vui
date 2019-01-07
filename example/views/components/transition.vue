@@ -7,7 +7,7 @@
                     <div>对于animate.css中成对的动作可以直接传入name即可：</div>
                     <div>例如：fadeIn/fadeOut，只需传入name="fade"</div>
                 </div>
-                <v-button @click="showFade = !showFade">fade</v-button>
+                <v-button @click="showFade = !showFade;">fade</v-button>
                 <v-transition name="fade">
                     <div v-show="showFade">name = fade</div>
                 </v-transition>

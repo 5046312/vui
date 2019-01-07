@@ -4,7 +4,6 @@ import Button from './components/button'
 import Layout from './components/layout'
 import { Row, Col } from './components/grid'
 import Code from './components/code'
-import CodePanel from './components/codepanel'
 import Transition from './components/transition'
 import Mask from './components/mask'
 import Toast from './components/toast'
@@ -21,7 +20,6 @@ const install = Vue => {
     Vue.component(Row.name, Row)
     Vue.component(Col.name, Col)
     Vue.component(Code.name, Code)
-    Vue.component(CodePanel.name, CodePanel)
     Vue.component(Transition.name, Transition)
 }
 
