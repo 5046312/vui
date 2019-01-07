@@ -11,7 +11,7 @@
             </div>
             <div class="right">
                 <div :style="{height}" class="origin-code" :class="{transition}">
-                    <v-code :code="code" ref="origin"></v-code>
+                    <v-code :code="code" ref="origin" :class="{allHeight: leftHeighter}"></v-code>
                 </div>
                 <div class="show-control" @click="show = !show">{{show ? "收起源码" : "展开源码"}}</div>
             </div>
@@ -28,7 +28,8 @@ export default {
         return {
             show: false,
             leftHeight: 0,
-            transition: false
+            leftHeighter: false, // 左侧比右侧高
+            transition: false, // 展开动画
         };
     },
     watch: {
@@ -37,14 +38,12 @@ export default {
         }
     },
     mounted() {
-        this.leftHeight =
-            this.$refs.desc.offsetHeight + this.$refs.style.offsetHeight - 40;
-        window.onresize = () => {
-            this.leftHeight =
-                this.$refs.desc.offsetHeight +
-                this.$refs.style.offsetHeight -
-                40;
-        };
+        // 获取左侧高度，为右侧伸缩做准备
+        this.leftHeight = this.$refs.desc.offsetHeight + this.$refs.style.offsetHeight - 40;
+
+        // 判断是否左侧比右侧更高
+        this.leftHeighter = this.leftHeight > this.$refs.origin.$el.offsetHeight
+
     },
     methods: {},
     computed: {
@@ -52,21 +51,21 @@ export default {
         height() {
             if (this.show) {
                 // 展开，则origin-code高度为源码高度
-                return this.$refs.origin.$el.offsetHeight;
+                return this.leftHeighter ? this.leftHeight + "px" : this.originHeight + "px"
             } else {
                 // 未展开时
-                // if (
-                //     this.leftHeight &&
-                //     this.leftHeight > this.$refs.origin.$el.offsetHeight
-                // ) {
-                //     // 左侧大于右侧
-                // }
                 return this.leftHeight + "px";
             }
-        }
+        },
+        originHeight() {
+            return this.$refs.origin.$el.offsetHeight;
+        },
     }
 };
 </script>
 <style lang="scss" scoped>
 @import "../../../styles/components/codepanel";
+.allHeight{
+    height: 100%;
+}
 </style>
