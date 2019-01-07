@@ -9,15 +9,14 @@
     </v-layout>
 </template>
 <script>
-import code from '@/codes/alert'
+import code from "@/codes/alert";
 export default {
-    data(){
+    data() {
         return {
-            code,
-        }
+            code
+        };
     }
-}
+};
 </script>
 <style lang="scss" scoped>
-
 </style>
