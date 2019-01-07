@@ -1,7 +1,7 @@
 <template>
     <v-layout>
         <div class='main-contain'>
-            <v-codepanel :code="base">
+            <demo :code="base">
                 <div slot="desc">
                     <div>对vue的transition组件和animate.css进行了简单封装。</div>
                     <div>对于animate.css中成对的动作可以直接传入name即可：</div>
@@ -11,7 +11,7 @@
                 <v-transition name="fade">
                     <div v-show="showFade">name = fade</div>
                 </v-transition>
-            </v-codepanel>
+            </demo>
         </div>
     </v-layout>
 </template>

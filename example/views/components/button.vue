@@ -1,7 +1,7 @@
 <template>
   <v-layout>
     <div class='main-contain'>
-      <v-codepanel :code="base">
+      <demo :code="base">
         <div slot="desc">
           基础说明部分
         </div>
@@ -14,9 +14,9 @@
             <v-button type="error">Error</v-button>
             <v-button type="disable">Disable</v-button>
         </div>
-      </v-codepanel>
+      </demo>
       
-      <v-codepanel :code="click">
+      <demo :code="click">
         <div slot="desc">
           基础说明部分
         </div>
@@ -50,14 +50,13 @@
             <v-button type="error">Error</v-button>
             <v-button type="disable">Disable</v-button>
         </div>
-      </v-codepanel>
+      </demo>
     </div>
   </v-layout>
 </template>
 <script>
 import code from "@/codes/button";
 export default {
-  components: {},
   data() {
     return {
       base: code.base,

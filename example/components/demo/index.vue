@@ -1,28 +1,33 @@
 <template>
-    <div id="vui-code-panel">
+    <div id="vui-demo">
         <div class="panel">
             <div class="left">
-                <div class="desc" ref="desc">
+                <div class="desc" ref="desc" v-show="$slots.desc">
                     <slot name="desc"></slot>
                 </div>
-                <div class="show-style" ref="style">
+                <div class="show-style" ref="style" v-show="$slots.default">
                     <slot></slot>
                 </div>
             </div>
-            <div class="right">
-                <div :style="{height}" class="origin-code" :class="{transition}">
+            <div class="right" v-show="code" :style="{height}" :class="{transition}">
+                <div class="origin-code">
                     <v-code :code="code" ref="origin" :class="{allHeight: leftHeighter}"></v-code>
                 </div>
-                <div class="show-control" @click="show = !show">{{show ? "收起源码" : "展开源码"}}</div>
             </div>
+            <div
+                v-show="code"
+                class="show-control"
+                @click="show = !show"
+            >{{show ? "Talk is cheap" : "Show me the code"}}</div>
         </div>
     </div>
 </template>
 <script>
 export default {
-    name: "v-codepanel",
     props: {
-        code: String
+        code: {
+            default: ""
+        }
     },
     data() {
         return {
@@ -66,7 +71,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-#vui-code-panel {
+#vui-demo {
     position: relative;
     padding: 20px;
     .panel {
@@ -75,14 +80,18 @@ export default {
         cursor: default;
         display: flex;
         border: 1px solid #eee;
+
         & > .left,
         & > .right {
-            width: 50%;
+            flex: 1;
         }
         & > .right {
             position: relative;
             overflow: hidden;
             padding-bottom: 40px;
+            &.transition {
+                transition: all 0.5s;
+            }
         }
         .desc {
             padding: 20px;
@@ -95,23 +104,22 @@ export default {
             box-sizing: border-box;
             background: #eeeeff;
             overflow: hidden;
-            &.transition {
-                transition: all 0.5s;
-            }
+            height: 100%;
         }
         // 展开按钮
         .show-control {
             position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 40px;
+            bottom: 20px;
+            left: 50%;
+            right: 20px;
+            height: 41px;
             background: #1e90ff;
             transition: all 0.7s;
             text-align: center;
             line-height: 40px;
             color: #fff;
             font-size: 14px;
+            user-select: none;
             &:hover {
                 background: #70a1ff;
             }

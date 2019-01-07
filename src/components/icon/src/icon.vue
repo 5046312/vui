@@ -1,7 +1,5 @@
 <template>
-  <button id="vui-icon" @click="$emit('click')">
-    <slot></slot>
-  </button>
+  <span class="fa fa-camera-retro fa-lg"></span>
 </template>
 <script>
 export default {
@@ -14,5 +12,4 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-@import "../../../styles/components/icon.scss";
 </style>
