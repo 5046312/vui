@@ -8,7 +8,6 @@ $ionicons-prefix: 'vui';
 @import 'ionicons-icons.scss';
 
 .vui-icon {
-    display: inline-block;
     font-family: $ionicons-font-family;
     speak: none;
     font-style: normal;
@@ -19,6 +18,11 @@ $ionicons-prefix: 'vui';
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 28px;
-    color: #373737;
+    font-size: 20px;
+    height: 20px;
+    width: 20px;
+    color: #333;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }

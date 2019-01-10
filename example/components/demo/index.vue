@@ -74,7 +74,7 @@ export default {
 #vui-demo {
     position: relative;
     padding: 20px;
-    .panel {
+    &>.panel {
         transition: all 0.7s;
         border-radius: 3px;
         cursor: default;
@@ -129,7 +129,7 @@ export default {
             border: 1px solid rgba(0, 0, 0, 0.1);
         }
     }
-    .allHeight {
+    &>.allHeight {
         height: 100%;
     }
 }

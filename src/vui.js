@@ -11,6 +11,7 @@ import Alert from './components/alert'
 import Loading from './components/loading'
 import Confirm from './components/confirm'
 import Modal from './components/modal'
+import Top from './components/top'
 
 
 const install = Vue => {
@@ -21,6 +22,7 @@ const install = Vue => {
     Vue.component(Col.name, Col)
     Vue.component(Code.name, Code)
     Vue.component(Transition.name, Transition)
+    Vue.component(Top.name, Top)
 }
 
 export default {
