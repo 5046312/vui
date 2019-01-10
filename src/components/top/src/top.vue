@@ -1,24 +1,54 @@
 <template>
-    <div id="vui-top" @click.stop.prevent='top'>
-        <slot></slot>
-    </div>
+    <v-transition name='fade'>
+        <div id="vui-top" @click.stop.prevent='back' :style="style" v-if="show">
+            <slot></slot>
+        </div>
+    </v-transition>
 </template>
 <script>
 export default {
     name: "v-top",
     props: {
+        right: {
+            default: '50'
+        },
+        bottom: {
+            default: '50'
+        },
+        // 到达多少scrollTop时显示
+        top: {
+            default: 0
+        }
     },
     data() {
-        return {};
+        return {
+            show: false,
+        };
+    },
+
+    mounted(){
+        let dom = this.$el.parentNode
+        this.show = dom.scrollTop > this.top
+        dom.addEventListener("scroll", () => {
+            this.show = dom.scrollTop > this.top
+        })
     },
 
     methods: {
         // 回到顶部
-        top(){
-            this.$el.parentElement.scrollTo(0, 0)
+        back(){
+            this.$el.parentNode.scrollTo(0, 0)
         }
     },
     computed: {
+        // 定位属性
+        style(){
+            return {
+                position: 'fixed',
+                right: this.right + 'px',
+                bottom: this.bottom + 'px'
+            }
+        }
     }
 };
 </script>

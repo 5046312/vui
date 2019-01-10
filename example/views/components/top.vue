@@ -1,9 +1,15 @@
 <template>
     <v-layout id="top">
-        <div ref='box' style="height: 100%;overflow-y: scroll">
-            <div class='height'></div>
-            <v-top>回到顶部</v-top>
-        </div>
+        <demo>
+            <div slot='desc'>
+                需要放在返回顶部的父级下
+            </div>
+            <div style="height: 300px;overflow-y: scroll;position: relative">
+                <div class='height'></div>
+                <v-top>回到顶部</v-top>
+            </div>
+        </demo>
+        
     </v-layout>
 </template>
 <script>
