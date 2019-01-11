@@ -241,7 +241,7 @@ export default {
         justify-content: center;
         height: 40px;
         font-size: 12px;
-        border-radius: 3px;
+        border-radius: 6px;
         &.blue {
             background: #1e90ff;
         }

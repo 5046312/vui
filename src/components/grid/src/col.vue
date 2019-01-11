@@ -1,8 +1,6 @@
 <template>
     <div id="vui-col" :style="{width: _width, paddingLeft: padding, paddingRight: padding, order, marginLeft: _offset}">
-        <div>
-            <slot></slot>
-        </div>
+        <slot></slot>
     </div>
 </template>
 <script>

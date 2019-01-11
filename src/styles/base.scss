@@ -2,3 +2,38 @@
 @import './common/var.scss';
 @import './common/mixin.scss';
 
+body{
+    font-family: PingFang SC, Helvetica Neue, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #363636;
+    background-color: #fff;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1{
+    font-size: 26px;
+}
+h2{
+    font-size: 22px;
+}
+h3{
+    font-size: 19px;
+}
+h4{
+    font-size: 17px;
+}
+h5{
+    font-size: 15px;
+}
+h6{
+    font-size: 13px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Helvetica Neue",Helvetica,Tahoma,Arial,'Microsoft Yahei','PingFang SC','Hiragino Sans GB','WenQuanYi Micro Hei',sans-serif;
+    font-weight: 700;
+    color: inherit;
+    margin: 0;
+    padding: 0;
+}

@@ -32,6 +32,7 @@ export const routerList = {
         children: [
             { meta: { title: '布局' }, path: 'layout', component: () => import("@/views/components/layout") },
             { meta: { title: '栅格' }, path: 'grid', component: () => import("@/views/components/grid") },
+            { meta: { title: '段落' }, path: 'paragraph', component: () => import("@/views/components/paragraph") },
         ]
     },
     form: {
