@@ -1,12 +1,12 @@
 <template>
   <v-layout>
     <div class='main-contain'>
-      <v-codepanel :code="code" desc="基础说明部分">
+      <demo :code="code" desc="基础说明部分">
         <Button>An info prompt</Button>
         <Button type="success">A success prompt</Button>
         <Button type="warning">A warning prompt</Button>
         <Button type="error">An error prompt</Button>
-      </v-codepanel>
+      </demo>
     </div>
   </v-layout>
 </template>

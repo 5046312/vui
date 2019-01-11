@@ -33,13 +33,16 @@ export default {
     box-shadow: 1px 1px 4px #eee;
     margin: 10px;
     &:hover{
+        background: #fff;
+        transition: all .3s ease-in-out;
         box-shadow: 1px 1px 4px #aaa;
         cursor: pointer;
+        transform: scale(1.3);
     }
     &>i{
-        height: 30px;
-        width: 30px;
-        font-size: 30px;
+        height: 26px;
+        width: 26px;
+        font-size: 26px;
         box-sizing: border-box;
     }
     &>.type{

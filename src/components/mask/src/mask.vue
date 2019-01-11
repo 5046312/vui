@@ -1,7 +1,7 @@
 <template>
     <v-transition name="fade">
         <div
-            id="vui-mask"
+            class="vui-mask"
             v-show="show"
             :style="{background: color, zIndex: zindex}"
             @click.stop.prevent="$emit('click', '')"

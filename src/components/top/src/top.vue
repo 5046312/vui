@@ -1,5 +1,5 @@
 <template>
-    <div id="vui-top" @click.stop.prevent='top'>
+    <div class="vui-top" @click.stop.prevent='top'>
         <slot></slot>
     </div>
 </template>

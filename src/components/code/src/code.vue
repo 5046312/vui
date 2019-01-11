@@ -1,5 +1,5 @@
 <template>
-    <div id="vui-code">
+    <div class="vui-code">
         <div class="tip">
             <div class="copy" @click="copy">复制代码</div>
         </div>

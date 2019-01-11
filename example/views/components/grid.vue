@@ -1,7 +1,7 @@
 <template>
     <v-layout>
         <div class="main-contain">
-            <v-codepanel :code="base">
+            <demo :code="base">
                 <div slot="desc">
                     <div>水平比例栅格，采用和Bootstrap一致的设定，最多12列，由width属性百分比来进行宽度设置，根据父容器宽度子容器进行适应</div>
                     <div>
@@ -22,9 +22,9 @@
                         </v-col>
                     </v-row>
                 </div>
-            </v-codepanel>
+            </demo>
 
-            <v-codepanel :code="base">
+            <demo :code="base">
                 <div slot="desc">
                     <div>v-row组件支持间隔gutter设置，为相邻两v-col组件的px间距</div>
                 </div>
@@ -41,9 +41,9 @@
                         </v-col>
                     </v-row>
                 </div>
-            </v-codepanel>
+            </demo>
 
-            <v-codepanel :code="base">
+            <demo :code="base">
                 <div slot="desc">
                     <div>v-row组件支持外边距margin设置，为v-row组件设置px外边距</div>
                 </div>
@@ -55,9 +55,9 @@
                         <div class="block red">width = 6</div>
                     </v-col>
                 </v-row>
-            </v-codepanel>
+            </demo>
 
-            <v-codepanel :code="base">
+            <demo :code="base">
                 <div slot="desc">
                     <div>v-row组件支持不同的v-col水平方向对其方式 justify</div>
                 </div>
@@ -114,9 +114,9 @@
                         <div class="block blue">width = 3</div>
                     </v-col>
                 </v-row>
-            </v-codepanel>
+            </demo>
 
-            <v-codepanel :code="base">
+            <demo :code="base">
                 <div slot="desc">
                     <div>v-row组件支持不同的v-col垂直方向对其方式 align</div>
                 </div>
@@ -161,9 +161,9 @@
                 </v-row>
 
                 <div style="height: 20px;"></div>
-            </v-codepanel>
+            </demo>
 
-            <v-codepanel :code="base">
+            <demo :code="base">
                 <div slot="desc">
                     <div>v-col组件支持排序。order小的排在前</div>
                 </div>
@@ -181,9 +181,9 @@
                         <div class="block red">3,order 1</div>
                     </v-col>
                 </v-row>
-            </v-codepanel>
+            </demo>
 
-            <v-codepanel :code="base">
+            <demo :code="base">
                 <div slot="desc">
                     <div>v-col组件支持相对左侧偏移量，offset值仍为所占份数</div>
                 </div>
@@ -211,7 +211,7 @@
                         <div class="block blue">width=4 offet=8</div>
                     </v-col>
                 </v-row>
-            </v-codepanel>
+            </demo>
         </div>
     </v-layout>
 </template>

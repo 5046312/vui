@@ -1,5 +1,5 @@
 <template>
-    <div id="vui-loading">
+    <div class="vui-loading">
         <div class="tip">{{msg}}</div>
     </div>
 </template>

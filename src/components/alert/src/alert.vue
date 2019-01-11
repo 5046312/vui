@@ -1,5 +1,5 @@
 <template>
-    <div id="vui-alert">
+    <div class="vui-alert">
         <div class="tip">{{msg}}</div>
     </div>
 </template>

@@ -1,7 +1,7 @@
 <template>
     <div class="layout">
         <div class="nav">
-            <router-link class="title" to="/" tag="div">Welcome</router-link>
+            <router-link class="title" to="/" tag="div">Vui</router-link>
             <div v-for="(part, index) in list" :key="index">
                 <div class="part-title">{{part.title}}</div>
                 <div class="part-item">

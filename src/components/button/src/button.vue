@@ -1,5 +1,5 @@
 <template>
-    <button id="vui-button" :class="type" @click="$emit('click')">
+    <button class="vui-button" :class="type" @click="$emit('click')">
         <slot></slot>
     </button>
 </template>

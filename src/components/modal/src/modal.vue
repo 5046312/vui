@@ -1,5 +1,5 @@
 <template>
-    <div id="vui-modal">
+    <div class="vui-modal">
         <div class="tip">{{msg}}</div>
     </div>
 </template>

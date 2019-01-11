@@ -4,6 +4,14 @@ Vue.use(router)
 
 
 export const routerList = {
+    hello: {
+        title: '欢迎',
+        children: [
+            { meta: { title: '介绍' }, path: 'introduce', component: () => import("@/views/hello/introduce") },
+            { meta: { title: '安装' }, path: 'install', component: () => import("@/views/hello/install") },
+            { meta: { title: '感谢' }, path: 'grateful', component: () => import("@/views/hello/grateful") },
+        ]
+    },
     basic: {
         title: '基础控件',
         children: [
