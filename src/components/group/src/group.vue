@@ -1,18 +1,18 @@
 <template>
-    <div class="vui-button" :class="type" @click="$emit('click')">
+    <div class='vui-group'>
         <slot></slot>
     </div>
 </template>
 <script>
 export default {
-    name: "v-button",
+    name: "v-group",
     props:{
-        type: {
+        direction: {
             default: 'default'
         }
     },
 };
 </script>
 <style lang="scss" scoped>
-@import "../../../styles/components/button";
+@import "../../../styles/components/group";
 </style>
