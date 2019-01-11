@@ -4,12 +4,12 @@ Vue.use(router)
 
 
 export const routerList = {
-    hello: {
+    intro: {
         title: '欢迎',
         children: [
-            { meta: { title: '介绍' }, path: 'introduce', component: () => import("@/views/hello/introduce") },
-            { meta: { title: '安装' }, path: 'install', component: () => import("@/views/hello/install") },
-            { meta: { title: '感谢' }, path: 'grateful', component: () => import("@/views/hello/grateful") },
+            { meta: { title: '介绍' }, path: 'introduce', component: () => import("@/views/intro/introduce") },
+            { meta: { title: '安装' }, path: 'install', component: () => import("@/views/intro/install") },
+            { meta: { title: '感谢' }, path: 'grateful', component: () => import("@/views/intro/grateful") },
         ]
     },
     basic: {
@@ -61,6 +61,14 @@ export default new router({
     routes: [
         // 首页
         { path: '/', component: () => import('@/views/index') },
+
+        // 介绍
+        {
+            path: '/intro',
+            component: () => import("@/views/layout"),
+            redirect: 'intro/introduce',
+            children: routerList.intro.children
+        },
 
         // 基础控件
         {
