@@ -1,5 +1,5 @@
 <template>
-    <v-layout id="icon">
+    <div class="icon">
         <demo>
             <div slot="desc">Material style</div>
             <div class="panel">
@@ -716,7 +716,7 @@
                 <icon type="logo-youtube"/>
             </div>
         </demo>
-    </v-layout>
+    </div>
 </template>
 <script>
 import code from "@/codes/alert";
@@ -733,7 +733,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-#icon {
+.icon {
     & > .panel {
         display: flex;
         flex-wrap: wrap;

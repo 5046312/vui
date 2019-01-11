@@ -1,6 +1,6 @@
 <template>
     <div
-        id="vui-row"
+        class="vui-row"
         :style="{paddingLeft: _margin, paddingRight: _margin, justifyContent: _flex_content, alignItems:_align_items}"
     >
         <slot></slot>

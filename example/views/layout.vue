@@ -1,7 +1,7 @@
 <template>
-    <div class="layout">
+    <div id="layout">
         <div class="nav">
-            <router-link class="title" to="/" tag="div">Welcome</router-link>
+            <router-link class="title" to="/" tag="div">Vui</router-link>
             <div v-for="(part, index) in list" :key="index">
                 <div class="part-title">{{part.title}}</div>
                 <div class="part-item">
@@ -30,8 +30,8 @@ export default {
     }
 };
 </script>
-<style lang="scss" scoped>
-@mixin scrollbar() {
+<style lang="scss">
+@mixin scrollbar($opacity) {
     /*滚动条整体样式*/
     &::-webkit-scrollbar {
         width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
@@ -41,9 +41,9 @@ export default {
     /*滚动条里面小方块*/
     &::-webkit-scrollbar-thumb {
         border-radius: 4px;
-        background: rgba(160, 160, 160, 0.2);
+        background: rgba(160, 160, 160, $opacity);
         &:hover {
-            background-color: rgba(160, 160, 160, 0.6);
+            background-color: rgba(160, 160, 160, 0.8);
         }
     }
     /*滚动条里面轨道*/
@@ -52,19 +52,18 @@ export default {
         background: rgba(160, 160, 160, 0);
     }
 }
-.layout {
+#layout {
     display: flex;
     height: 100%;
-    width: 1100px;
-    margin: 0 auto;
-    .nav {
-        width: 200px;
+    & > .nav {
         background: #f9f9f9;
         height: 100%;
+        width: 30%;
         overflow-y: hidden;
+        max-width: 340px;
         &:hover {
             overflow-y: scroll;
-            @include scrollbar();
+            @include scrollbar(0.4);
         }
 
         .title {
@@ -100,12 +99,14 @@ export default {
         }
     }
     // router-view
-    .content {
+    & > .content {
         flex: 1;
-        overflow: hidden;
+        overflow-y: scroll;
         background: #fff;
-        &:hover {
-            @include scrollbar();
+        height: 100%;
+        @include scrollbar(1);
+        & > div {
+            max-width: 1000px;
         }
     }
 }

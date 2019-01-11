@@ -1,12 +1,12 @@
 <template>
     <v-layout>
         <div class='main-contain'>
-            <v-codepanel :code="base">
+            <demo :code="base">
                 <div slot="desc">
                     单例模式，全局只会存在唯一的mask，所以多次调用也无需担心
                 </div>
                 <v-button @click="showMaskSchedule">弹出一个Mask遮罩，1s后关闭</v-button>
-            </v-codepanel>
+            </demo>
         </div>
     </v-layout>
 </template>

@@ -1,11 +1,13 @@
 <template>
-    <div id="vui-code">
+    <div class="vui-code" :style="emptyCodeStyle">
         <div class="tip">
             <div class="copy" @click="copy">复制代码</div>
         </div>
         <pre v-highlight>
-        <code v-text="code.replace('\n', '')" :class="lang" class="code"></code>
-    </pre>
+            <code v-text="code.replace('\n', '')" :class="lang" class="code">
+                <slot></slot>
+            </code>
+        </pre>
     </div>
 </template>
 <script>
@@ -18,7 +20,9 @@ export default {
         lang: {
             default: "auto"
         },
-        code: String
+        code: {
+            default: ""
+        }
     },
     data() {
         return {};
@@ -43,7 +47,11 @@ export default {
             });
         }
     },
-    computed: {}
+    computed: {
+        emptyCodeStyle(){
+            return this.code == '' ? { "background": "#eee" } : ''
+        }
+    }
 };
 </script>
 <style lang="scss">

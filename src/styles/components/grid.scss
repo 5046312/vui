@@ -1,10 +1,10 @@
 @import "../common/var";
-#vui-row{
+.vui-row{
     display: flex;
     width: 100%;
     position: relative;
     box-sizing: border-box;
-    #vui-col{
+    .vui-col{
         &:first-child{
             padding-left: 0 !important;
         }

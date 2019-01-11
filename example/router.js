@@ -4,6 +4,14 @@ Vue.use(router)
 
 
 export const routerList = {
+    intro: {
+        title: '欢迎',
+        children: [
+            { meta: { title: '介绍' }, path: 'introduce', component: () => import("@/views/intro/introduce") },
+            { meta: { title: '安装' }, path: 'install', component: () => import("@/views/intro/install") },
+            { meta: { title: '感谢' }, path: 'grateful', component: () => import("@/views/intro/grateful") },
+        ]
+    },
     basic: {
         title: '基础控件',
         children: [
@@ -24,6 +32,7 @@ export const routerList = {
         children: [
             { meta: { title: '布局' }, path: 'layout', component: () => import("@/views/components/layout") },
             { meta: { title: '栅格' }, path: 'grid', component: () => import("@/views/components/grid") },
+            { meta: { title: '段落' }, path: 'paragraph', component: () => import("@/views/components/paragraph") },
         ]
     },
     form: {
@@ -52,6 +61,14 @@ export default new router({
     routes: [
         // 首页
         { path: '/', component: () => import('@/views/index') },
+
+        // 介绍
+        {
+            path: '/intro',
+            component: () => import("@/views/layout"),
+            redirect: 'intro/introduce',
+            children: routerList.intro.children
+        },
 
         // 基础控件
         {

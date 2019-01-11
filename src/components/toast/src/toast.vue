@@ -1,6 +1,6 @@
 <template>
     <v-transition name="fade">
-        <div id="vui-toast" v-show="show" @click="show = false">
+        <div class="vui-toast" v-show="show" @click="show = false">
             <div class="tip">{{msg}}</div>
         </div>
     </v-transition>

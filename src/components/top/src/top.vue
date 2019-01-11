@@ -1,9 +1,7 @@
 <template>
-    <v-transition name='fade'>
-        <div id="vui-top" @click.stop.prevent='back' :style="style" v-if="show">
-            <slot></slot>
-        </div>
-    </v-transition>
+    <div class="vui-top" @click.stop.prevent='top'>
+        <slot></slot>
+    </div>
 </template>
 <script>
 export default {
