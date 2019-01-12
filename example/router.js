@@ -33,7 +33,7 @@ export const routerList = {
             { meta: { title: '面包屑' }, path: 'bread', component: () => import("@/views/components/button") },
             { meta: { title: '图片' }, path: 'picture', component: () => import("@/views/components/button") },
             { meta: { title: '多级标题' }, path: 'title', component: () => import("@/views/components/button") },
-            { meta: { title: '分割线' }, path: 'hr', component: () => import("@/views/components/button") },
+            { meta: { title: '分割线' }, path: 'hr', component: () => import("@/views/components/hr") },
         ]
     },
 

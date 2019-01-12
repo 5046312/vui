@@ -1,0 +1,25 @@
+@import "../common/var";
+.vui-hr{
+    position: relative;
+    display: flex;
+    align-items: center;
+    &::before, &::after{
+        content: " ";
+        border-top: 1px solid #aaa;
+        flex-grow: 1;
+    }
+
+    &.vui-hr-left{
+        &::before{
+            flex-grow: 0;
+            width: 5%;
+        }
+    }
+
+    &.vui-hr-right{
+        &::after{
+            flex-grow: 0;
+            width: 5%;
+        }
+    }
+}

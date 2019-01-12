@@ -13,6 +13,7 @@ import Loading from './components/loading'
 import Confirm from './components/confirm'
 import Modal from './components/modal'
 import Top from './components/top'
+import Hr from './components/hr'
 
 
 const install = Vue => {
@@ -25,6 +26,7 @@ const install = Vue => {
     Vue.component(Code.name, Code)
     Vue.component(Transition.name, Transition)
     Vue.component(Top.name, Top)
+    Vue.component(Hr.name, Hr)
 }
 
 export default {

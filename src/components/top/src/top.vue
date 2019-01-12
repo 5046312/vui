@@ -25,11 +25,15 @@ export default {
     },
 
     mounted(){
-        let dom = this.$el.parentNode
-        this.show = dom.scrollTop > this.top
-        dom.addEventListener("scroll", () => {
+        if(this.top == 0){
+            this.show = true
+        }else{
+            let dom = this.$el.parentNode
             this.show = dom.scrollTop > this.top
-        })
+            dom.addEventListener("scroll", () => {
+                this.show = dom.scrollTop > this.top
+            })
+        }
     },
 
     methods: {
