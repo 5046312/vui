@@ -1,31 +1,23 @@
 let code = {}
 code.base = `
 <template>
-    <v-button @click="showToast">弹出一个Toast</v-button>
+    <v-button>Default</v-button>
+    <v-button type="primary">Primary</v-button>
+    <v-button type="danger">Danger</v-button>
+    <v-button type="warning">Warning</v-button>
+    <v-button type="success">Success</v-button>
+    <v-button type="error">Error</v-button>
+    <v-button type="disable">Disable</v-button>
 </template>
-<script>
-    export default {
-        methods: {
-            showToast() {
-                this.$toast("弹出一个Toast");
-            }
-        }
-    }
-</script>
 `
-code.click = `
+code.group = `
 <template>
-    <v-button @click="showToast">弹出一个Toast</v-button>
+    <v-group>
+        <v-button type="primary">Primary</v-button>
+        <v-button type="danger">Danger</v-button>
+        <v-button type="warning">Warning</v-button>
+    </v-group>
 </template>
-<script>
-    export default {
-        methods: {
-            showToast() {
-                this.$toast("弹出一个Toast");
-            }
-        }
-    }
-</script>
 `
 
 export default code

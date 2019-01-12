@@ -12,6 +12,15 @@ export const routerList = {
             { meta: { title: '感谢' }, path: 'grateful', component: () => import("@/views/intro/grateful") },
         ]
     },
+    layout: {
+        title: '布局管理',
+        children: [
+            { meta: { title: '布局' }, path: 'layout', component: () => import("@/views/components/layout") },
+            { meta: { title: '栅格' }, path: 'grid', component: () => import("@/views/components/grid") },
+            { meta: { title: '段落' }, path: 'paragraph', component: () => import("@/views/components/paragraph") },
+        ]
+    },
+    
     basic: {
         title: '基础控件',
         children: [
@@ -27,14 +36,7 @@ export const routerList = {
             { meta: { title: '分割线' }, path: 'hr', component: () => import("@/views/components/button") },
         ]
     },
-    layout: {
-        title: '布局管理',
-        children: [
-            { meta: { title: '布局' }, path: 'layout', component: () => import("@/views/components/layout") },
-            { meta: { title: '栅格' }, path: 'grid', component: () => import("@/views/components/grid") },
-            { meta: { title: '段落' }, path: 'paragraph', component: () => import("@/views/components/paragraph") },
-        ]
-    },
+
     form: {
         title: '表单',
         children: [

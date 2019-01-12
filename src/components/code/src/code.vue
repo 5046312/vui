@@ -1,11 +1,10 @@
 <template>
-    <div class="vui-code" :style="emptyCodeStyle">
+    <div class="vui-code">
         <div class="tip">
             <div class="copy" @click="copy">复制代码</div>
         </div>
         <pre v-highlight>
             <code v-text="code.replace('\n', '')" :class="lang" class="code">
-                <slot></slot>
             </code>
         </pre>
     </div>
@@ -48,9 +47,7 @@ export default {
         }
     },
     computed: {
-        emptyCodeStyle(){
-            return this.code == '' ? { "background": "#eee" } : ''
-        }
+        
     }
 };
 </script>

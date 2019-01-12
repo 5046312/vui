@@ -1,18 +1,20 @@
 <template>
-    <div>
-        感谢
-        <ul>
-            <li>vue</li>
-            <li>element-ui</li>
-            <li>iview</li>
-        </ul>
-    </div>    
+  <div>
+    <demo>
+      <div slot="desc">感谢</div>
+      <div>组件部分功能借鉴了前辈们的优秀成果，阅读他们的源码也让我成长很多，在此表示由衷的感谢！（不分先后）</div>
+      <div>
+          <ul>
+              <li><a href="https://cn.vuejs.org/">Vue.js</a></li>
+              <li><a href="https://element.eleme.io/">elementUI</a></li>
+              <li><a href="https://www.iviewui.com">iView</a></li>
+          </ul>
+      </div>
+    </demo>
+  </div>
 </template>
 <script>
-export default {
-    
-}
+export default {};
 </script>
 <style lang="scss" scoped>
-
 </style>

@@ -1,6 +1,6 @@
 <template>
     <div class="main-contain">
-        <demo :code="base">
+        <demo :code="code.base">
             <div slot="desc">基础说明部分</div>
             <div class="buttonWrap">
                 <v-button>Default</v-button>
@@ -13,7 +13,7 @@
             </div>
         </demo>
 
-        <demo :code="base">
+        <demo :code="code.group">
             <div slot="desc">可以适用 "组" 组件</div>
             <v-group>
                 <v-button type="primary">Primary</v-button>
@@ -28,7 +28,7 @@ import code from "@/codes/button";
 export default {
     data() {
         return {
-            base: code.base,
+            code,
             click: code.click
         };
     }
