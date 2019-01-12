@@ -2,7 +2,7 @@
     <v-layout>
         <div class='main-contain'>
             <demo :code="base">
-                <div slot="desc">Toast 吐司</div>
+                <div slot="desc">页面加载进度</div>
                 <v-button @click="showToast">弹出一个Toast</v-button>
             </demo>
         </div>

@@ -29,15 +29,15 @@ export default {
     align-items: center;
     justify-content: center;
     border-radius: 10px;
-    transition: all .5s;
+    transition: all .4s;
     box-shadow: 1px 1px 4px #eee;
     margin: 10px;
     &:hover{
         background: #fff;
-        transition: all .3s ease-in-out;
+        transition: all .26s ease-in-out;
         box-shadow: 1px 1px 4px #aaa;
         cursor: pointer;
-        transform: scale(1.3);
+        transform: scale(1.2);
     }
     &>i{
         height: 26px;

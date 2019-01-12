@@ -21,6 +21,6 @@ Vue.prototype.$toast = (msg = 'toast', duration = '2') => {
     clearTimeout(timer)
     timer = setTimeout(() => {
         clearTimeout(timer);
-        // instance.show = false
+        instance.show = false
     }, instance.duration + 100);
 };
