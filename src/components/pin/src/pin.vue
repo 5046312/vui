@@ -23,36 +23,28 @@ export default {
             pin: false,
             pinHeight: 0, // pin dom的高度
             scrollTop: 0, // parent scrollTop
-            topToBody: 0, // 当前top距离body顶部距离
+            topToParent: 0, // 当前top距离父元素顶部距离
         }
     },
     mounted(){
         this.pinHeight = this.$refs.pin.offsetHeight
-        this.topToBody = this.getOffsetTopByBody(this.$el)
+        this.topToParent = this.$el.style.top
 
         let dom = this.$el.parentNode
         this.pin = dom.scrollTop > this.top
         dom.addEventListener("scroll", () => {
+            console.log(dom.scrollTop, this.topToParent)
             this.scrollTop = dom.scrollTop
-            this.pin = dom.scrollTop  > this.top + this.topToBody
+            this.pin = dom.scrollTop  > this.top + this.topToParent
         })
 
         
     },
     methods: {
-        // 获取相对body的位置
-        getOffsetTopByBody (el) {
-            let offsetTop = 0
-            while (el && el.tagName !== 'BODY') {
-                offsetTop += el.offsetTop
-                el = el.offsetParent
-            }
-            return offsetTop
-        }
     },
     computed:   {
         pinStyle(){
-            let Y = this.pin ? this.scrollTop - this.topToBody : 0
+            let Y = this.pin ? this.scrollTop - this.top : 0
             return {
                 transform: `translateY(${Y}px)`
             }
