@@ -53,6 +53,8 @@ export const routerList = {
             { meta: { title: '加载' }, path: 'loading', component: () => import("@/views/components/loading") },
             { meta: { title: '确认' }, path: 'confirm', component: () => import("@/views/components/confirm") },
             { meta: { title: '模态框' }, path: 'modal', component: () => import("@/views/components/modal") },
+            { meta: { title: '滚动监听' }, path: 'scrollspy', component: () => import("@/views/components/scrollspy") },
+            { meta: { title: '钉' }, path: 'pin', component: () => import("@/views/components/pin") },
             { meta: { title: '回到顶部' }, path: 'top', component: () => import("@/views/components/top") },
         ]
     },

@@ -14,6 +14,8 @@ import Confirm from './components/confirm'
 import Modal from './components/modal'
 import Top from './components/top'
 import Hr from './components/hr'
+import Scrollspy from './components/scrollspy'
+import Pin from './components/pin'
 
 
 const install = Vue => {
@@ -27,6 +29,8 @@ const install = Vue => {
     Vue.component(Transition.name, Transition)
     Vue.component(Top.name, Top)
     Vue.component(Hr.name, Hr)
+    Vue.component(Scrollspy.name, Scrollspy)
+    Vue.component(Pin.name, Pin)
 }
 
 export default {

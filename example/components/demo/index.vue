@@ -83,6 +83,7 @@ export default {
 
         & > .left,
         & > .right {
+            background: #fff;
             flex: 1;
         }
         & > .right {
