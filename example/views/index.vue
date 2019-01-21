@@ -1,7 +1,7 @@
 <template>
     <div>
         <div>index</div>
-        <v-button @click="$router.push('/basic')">start</v-button>
+        <v-button @click="$router.push('/intro')">start</v-button>
     </div>
 </template>
 <script>
