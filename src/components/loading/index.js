@@ -1,18 +1,27 @@
 import Vue from 'vue';
 import Loading from './src/loading'
+import Bar from './src/bar'
 
-let instance;
-function getInstance(data) {
-    if (!instance) {
-        const constructor = Vue.extend(Loading);
-        instance = new constructor({
+// loading bar
+let barInstance;
+function getInstance() {
+    if (!barInstance) {
+        const constructor = Vue.extend(Bar);
+        barInstance = new constructor({
             el: document.createElement('div'),
         });
-        document.body.appendChild(instance.$el);
+        document.body.appendChild(barInstance.$el);
     }
-    return instance;
+    return barInstance;
 }
 
-Vue.prototype.$loading = () => {
-    
+const $bar = {
+    start:() =>  getInstance().start(),
+    to: percent =>  getInstance().percent = percent,
+    end:() =>  getInstance().end(),
+    fail:() =>  getInstance().fail()
 };
+
+Vue.prototype.$bar = $bar
+
+export { $bar };

@@ -4,12 +4,11 @@ import Button from './components/button'
 import Group from './components/group'
 import Layout from './components/layout'
 import { Row, Col } from './components/grid'
-import Code from './components/code'
 import Transition from './components/transition'
 import Mask from './components/mask'
 import Toast from './components/toast'
 import Alert from './components/alert'
-import Loading from './components/loading'
+import {$bar} from './components/loading'
 import Confirm from './components/confirm'
 import Modal from './components/modal'
 import Top from './components/top'
@@ -25,14 +24,13 @@ const install = Vue => {
     Vue.component(Layout.name, Layout)
     Vue.component(Row.name, Row)
     Vue.component(Col.name, Col)
-    Vue.component(Code.name, Code)
     Vue.component(Transition.name, Transition)
     Vue.component(Top.name, Top)
     Vue.component(Hr.name, Hr)
     Vue.component(Scrollspy.name, Scrollspy)
     Vue.component(Pin.name, Pin)
 }
-
 export default {
-    install
+    install,
+    '$bar': $bar
 }

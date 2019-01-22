@@ -17,3 +17,26 @@
         max-width: 200px;
     }
 }
+
+// loading bar
+#vui-loading-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    .bar{
+        transition: all 0.7s;
+        background: $primary;
+        width: 0%;
+
+        &.loading{
+            background: $primary;
+        }
+        &.success{
+            background: $success;
+        }
+        &.fail{
+            background: $error;
+        }
+    }
+}

@@ -1,6 +1,6 @@
 <template>
     <v-layout>
-        <demo :code="base">
+        <v-demo>
             <div slot="desc">段落</div>
             <div>
                 <h1>H1 H1 H1 H1 H1</h1>
@@ -10,7 +10,7 @@
                 <h5>H5 H5 H5 H5 H5</h5>
                 <h6>H6 H6 H6 H6 H6</h6>
             </div>
-        </demo>
+        </v-demo>
     </v-layout>
 </template>
 <script>

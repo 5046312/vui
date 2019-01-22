@@ -1,6 +1,6 @@
 <template>
     <div class="main-contain">
-        <demo :code="code.base">
+        <v-demo :code="code.base">
             <div slot="desc">基础说明部分</div>
             <div class="buttonWrap">
                 <v-button>Default</v-button>
@@ -11,16 +11,16 @@
                 <v-button type="error">Error</v-button>
                 <v-button type="disable">Disable</v-button>
             </div>
-        </demo>
+        </v-demo>
 
-        <demo :code="code.group">
-            <div slot="desc">可以适用 "组" 组件</div>
+        <v-demo :code="code.group">
+            <div slot="desc">可以使用 "组" 组件，创造一组按钮</div>
             <v-group>
                 <v-button type="primary">Primary</v-button>
                 <v-button type="danger">Danger</v-button>
                 <v-button type="warning">Warning</v-button>
             </v-group>
-        </demo>
+        </v-demo>
     </div>
 </template>
 <script>

@@ -4,8 +4,11 @@ import Vui from '../src/vui'
 Vue.use(Vui)
 import router from './router'
 
+import Code from '@/components/code'
+Vue.component('v-code', Code);
 import Demo from '@/components/demo'
-Vue.component('demo', Demo);
+Vue.component('v-demo', Demo);
+
 Vue.config.productionTip = false
 
 new Vue({

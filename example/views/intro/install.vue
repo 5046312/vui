@@ -1,13 +1,13 @@
 <template>
     <div id="install">
-        <demo>
+        <v-demo>
             <div slot="desc">安装</div>
             <div>
                 在Vue项目中使用npm、yarn进行安装
             </div>
             <v-code code="npm install vui-ui" class="code"/>
             <v-code code="yarn add vui-ui" class="code"/>
-        </demo>
+        </v-demo>
     </div>
 </template>
 <script>

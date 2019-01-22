@@ -1,7 +1,7 @@
 import router from 'vue-router'
 import Vue from 'vue'
+import Vui from '../src/vui'
 Vue.use(router)
-
 
 export const routerList = {
     intro: {
@@ -26,7 +26,7 @@ export const routerList = {
         children: [
             { meta: { title: '图标' }, path: 'icon', component: () => import("@/views/components/icon") },
             { meta: { title: '按钮' }, path: 'button', component: () => import("@/views/components/button") },
-            { meta: { title: '进度' }, path: 'progress', component: () => import("@/views/components/button") },
+            { meta: { title: '进度' }, path: 'progress', component: () => import("@/views/components/progress") },
             { meta: { title: '标签' }, path: 'tag', component: () => import("@/views/components/button") },
             { meta: { title: '多选' }, path: 'select', component: () => import("@/views/components/button") },
             { meta: { title: '单选' }, path: 'radio', component: () => import("@/views/components/button") },
@@ -60,7 +60,7 @@ export const routerList = {
     },
 }
 
-export default new router({
+ const docRouter = new router({
     mode: "hash",
     routes: [
         // 首页
@@ -101,3 +101,14 @@ export default new router({
         { path: '*', component: () => import('@/views/404') },
     ]
 })
+
+docRouter.beforeEach((to, from, next) => {
+    Vui.$bar.start()
+    next();
+});
+
+docRouter.afterEach(() => {
+    Vui.$bar.end();
+});
+
+export default docRouter
