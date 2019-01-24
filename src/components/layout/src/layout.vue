@@ -24,7 +24,6 @@ export default {
     display: flex;
     flex-direction: column;
     .content{
-        overflow-y: auto;
         flex: 1;
         @include scrollbar();
     }
