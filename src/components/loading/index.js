@@ -1,13 +1,13 @@
 import Vue from 'vue';
 import Loading from './src/loading'
-import Bar from './src/bar'
+import LoadingBar from './src/bar'
 
 // loading bar
 class Bar {
     instance = null
-    static getInstance(){
+    static getInstance() {
         if (!this.instance) {
-            const constructor = Vue.extend(Bar);
+            const constructor = Vue.extend(LoadingBar);
             this.instance = new constructor({
                 el: document.createElement('div'),
             });
@@ -15,11 +15,11 @@ class Bar {
         }
         return this.instance;
     }
-    
     start() { Bar.getInstance().start() }
     to(percent) { Bar.getInstance().percent = percent }
     end() { Bar.getInstance().end() }
     fail() { Bar.getInstance().fail() }
 }
-Vue.prototype.$bar = Bar.getInstance()
-export { '$bar': Bar.getInstance() };
+const $bar = new Bar()
+Vue.prototype.$bar = $bar
+export { $bar };
