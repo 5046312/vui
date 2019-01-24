@@ -15,6 +15,7 @@ import Top from './components/top'
 import Hr from './components/hr'
 import Scrollspy from './components/scrollspy'
 import Pin from './components/pin'
+import Progress from './components/progress'
 
 
 const install = Vue => {
@@ -29,6 +30,7 @@ const install = Vue => {
     Vue.component(Hr.name, Hr)
     Vue.component(Scrollspy.name, Scrollspy)
     Vue.component(Pin.name, Pin)
+    Vue.component(Progress.name, Progress)
 }
 export default {
     install,

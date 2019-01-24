@@ -3,7 +3,11 @@
         <v-demo :code="base">
             <div slot="desc">进度条</div>
             <div>
-                
+                <v-progress :percent="percent"/>
+                <v-button @click="percent += 6">增加</v-button>
+                <v-button @click="percent -= 6">减少</v-button>
+                <v-progress type='warning'/>
+                <v-progress type='success'/>
             </div>
         </v-demo>
 
@@ -29,7 +33,8 @@ export default {
     components: {},
     data() {
         return {
-            base: ''
+            base: '',
+            percent: 0
         };
     },
     methods: {}

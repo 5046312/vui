@@ -1,0 +1,39 @@
+@import "../common/var";
+.vui-progress{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px 0;
+    &>.contain{
+        height: 100%;
+        flex: 1;
+        position: relative;
+        margin-right: 10px;
+        box-sizing: border-box;
+        overflow: hidden;
+        &>.bar{
+            position: absolute;
+            height: 100%;
+            background: $primary;
+            z-index: 1;
+            transition: all .4s;
+            &.success{
+                background: $success;
+            }
+        }
+
+        &>.bg{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: #eee;
+            top: 0;
+        }
+    }
+    &>.percent{
+        width: 30px;
+        &.success{
+            color: $success;
+        }
+    }
+}
