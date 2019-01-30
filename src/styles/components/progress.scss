@@ -14,20 +14,16 @@
             position: absolute;
             height: 100%;
             background: $primary;
-            box-shadow: 1px 0px 1px $primary;
             z-index: 1;
             transition: all .4s;
             &.success{
                 background: $success;
-                box-shadow: 1px 0px 1px $success;
             }
             &.warning{
                 background: $warn;
-                box-shadow: 1px 0px 1px $warn;
             }
             &.error{
                 background: $error;
-                box-shadow: 1px 0px 1px $error;
             }
         }
 
@@ -40,8 +36,10 @@
         }
     }
     &>.percent{
-        margin: 0 5px;
-        width: 30px;
+        margin: 0 10px;
+        min-width: 30px;
+        white-space: nowrap;
+        transition: all .4s;
         &.success{
             color: $success;
         }

@@ -14,7 +14,7 @@
         </v-demo>
 
         <v-demo :code="code.size">
-            <div slot="desc">size 传入数字</div>
+            <div slot="desc">size 传入尺寸数字</div>
             <div class="buttonWrap">
                 <v-button type="primary" size="10">10 Size</v-button>
                 <v-button type="primary">Default Size</v-button>
