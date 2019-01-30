@@ -8,17 +8,26 @@
         height: 100%;
         flex: 1;
         position: relative;
-        margin-right: 10px;
         box-sizing: border-box;
         overflow: hidden;
         &>.bar{
             position: absolute;
             height: 100%;
             background: $primary;
+            box-shadow: 1px 0px 1px $primary;
             z-index: 1;
             transition: all .4s;
             &.success{
                 background: $success;
+                box-shadow: 1px 0px 1px $success;
+            }
+            &.warning{
+                background: $warn;
+                box-shadow: 1px 0px 1px $warn;
+            }
+            &.error{
+                background: $error;
+                box-shadow: 1px 0px 1px $error;
             }
         }
 
@@ -31,6 +40,7 @@
         }
     }
     &>.percent{
+        margin: 0 5px;
         width: 30px;
         &.success{
             color: $success;

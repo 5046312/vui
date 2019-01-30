@@ -6,7 +6,6 @@
 }
 .vui-button{
     display: inline-block;
-    padding: 10px 15px;
     background: #eee;
     color: $font;
     border: 0;
@@ -17,25 +16,21 @@
     margin: 0 5px 10px;
     user-select: none;
     @include activeColor(#eee);
-    
     &.primary{
         background: $primary;
         color: #fff;
         @include activeColor($primary);
     }
-
     &.success{
         background: $success;
         color: #fff;
         @include activeColor($success);
     }
-
     &.danger{
         background: $danger;
         color: #fff;
         @include activeColor($danger);
     }
-
     &.warning{
         background: $warn;
         color: #fff;

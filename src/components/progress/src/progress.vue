@@ -1,11 +1,11 @@
 <template>
     <div class='vui-progress' :style="progressStyle">
         <div class='contain' :style="radiusStyle">
-            <div class='bar' :style="barStyle" :class='{success: this.isComplete}'></div>
+            <div class='bar' :style="barStyle" :class='barClass'></div>
             <div class='bg' :style="radiusStyle"></div>
         </div>
-        <div class='percent' :class='{success: this.isComplete}'>
-            {{this.percentValue < 100 ? this.percentValue + '%' : '完成'}}
+        <div class='percent' :class='{success: isComplete}' v-if="tip">
+            {{percentValue < 100 ? percentValue + '%' : '完成'}}
         </div>
     </div>
 </template>
@@ -13,12 +13,19 @@
 export default {
     name: 'v-progress',
     props: {
+        // 颜色
+        type: {
+            default: 'primary'
+        },
         // 粗细 px
         weight: {
             default: 10,
         },
         percent: {
             default: 0,
+        },
+        tip: {
+            default: false,
         }
     },
 
@@ -35,6 +42,13 @@ export default {
         progressStyle(){
             return {
                 height: this.weight + 'px',
+            }
+        },
+        barClass(){
+            return {
+                success: this.isComplete,
+                warning: this.type == 'warning' && !this.isComplete,
+                error: this.type == 'error' && !this.isComplete,
             }
         },
         barStyle(){

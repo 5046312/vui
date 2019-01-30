@@ -13,6 +13,16 @@
             </div>
         </v-demo>
 
+        <v-demo :code="code.base">
+            <div slot="desc">size 传入数字</div>
+            <div class="buttonWrap">
+                <v-button type="primary" size="10">10 Size</v-button>
+                <v-button type="primary">Default Size</v-button>
+                <v-button type="primary" size="20">20 Size</v-button>
+                <v-button type="primary" size="30">30 Size</v-button>
+            </div>
+        </v-demo>
+
         <v-demo :code="code.group">
             <div slot="desc">可以使用 "组" 组件，创造一组按钮</div>
             <v-group>

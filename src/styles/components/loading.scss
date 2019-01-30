@@ -31,12 +31,15 @@
 
         &.loading{
             background: $primary;
+            box-shadow: 1px 0px 4px $primary;
         }
         &.success{
             background: $success;
+            box-shadow: 1px 0px 4px $success;
         }
         &.fail{
             background: $error;
+            box-shadow: 1px 0px 4px $error;
         }
     }
 }
