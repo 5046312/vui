@@ -10,6 +10,14 @@ code.base = `
     <v-button type="disable">Disable</v-button>
 </template>
 `
+code.size = `
+<template>
+    <v-button type="primary" size="10">10 Size</v-button>
+    <v-button type="primary">Default Size</v-button>
+    <v-button type="primary" size="20">20 Size</v-button>
+    <v-button type="primary" size="30">30 Size</v-button>
+</template>
+`
 code.group = `
 <template>
     <v-group>

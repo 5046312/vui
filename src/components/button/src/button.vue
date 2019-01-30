@@ -1,6 +1,6 @@
 <template>
     <div class="vui-button" :class="type" @click="$emit('click')" :style="buttonStyle">
-        <div style="padding: .6em 1em;font-size: 1.1em">
+        <div class='content'>
             <slot></slot>
         </div>
     </div>

@@ -17,7 +17,7 @@ export default {
     name: "v-code",
     props: {
         lang: {
-            default: "auto"
+            default: "xml"
         },
         code: {
             default: ""

@@ -13,7 +13,7 @@
             </div>
         </v-demo>
 
-        <v-demo :code="code.base">
+        <v-demo :code="code.size">
             <div slot="desc">size 传入数字</div>
             <div class="buttonWrap">
                 <v-button type="primary" size="10">10 Size</v-button>
@@ -24,7 +24,7 @@
         </v-demo>
 
         <v-demo :code="code.group">
-            <div slot="desc">可以使用 "组" 组件，创造一组按钮</div>
+            <div slot="desc">可以使用 '按钮组'，创造一组按钮</div>
             <v-group>
                 <v-button type="primary">Primary</v-button>
                 <v-button type="danger">Danger</v-button>

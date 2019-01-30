@@ -16,6 +16,14 @@
     margin: 0 5px 10px;
     user-select: none;
     @include activeColor(#eee);
+    &>.content{
+        padding: .6em 1em;
+        font-size: 1.1em;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        box-sizing: border-box;
+    }
     &.primary{
         background: $primary;
         color: #fff;
