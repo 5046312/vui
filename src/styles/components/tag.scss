@@ -1,0 +1,28 @@
+@import "../common/var";
+.vui-tag{
+    user-select: none;
+    color: #fff;
+    border-radius: 4px;
+    margin: 0 3px;
+    &.default{
+        background: grey;
+    }
+    &.primary{
+        background: $primary;
+    }
+    &.info{
+        background: $info;
+    }
+    &.success{
+        background: $success;
+    }
+    &.error{
+        background: $error;
+    }
+    &.warning{
+        background: $warn;
+    }
+    &.danger{
+        background: $danger;
+    }
+}

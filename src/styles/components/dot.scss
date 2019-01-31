@@ -1,0 +1,28 @@
+@import "../common/var";
+.vui-dot{
+    display: inline-block;
+    user-select: none;
+    margin: 0 3px;
+    color: #fff;
+    &.default{
+        background: grey;
+    }
+    &.primary{
+        background: $primary;
+    }
+    &.info{
+        background: $info;
+    }
+    &.success{
+        background: $success;
+    }
+    &.error{
+        background: $error;
+    }
+    &.warning{
+        background: $warn;
+    }
+    &.danger{
+        background: $danger;
+    }
+}
