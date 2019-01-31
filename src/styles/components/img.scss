@@ -1,0 +1,17 @@
+@import '../common/var';
+.vui-img{
+    display: inline-block;
+    &.thumb{
+        padding: 4px;
+        border: 1px solid #eee;
+    }
+    &>.img{
+        background-repeat:no-repeat;
+    }
+    &>.text{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+}
