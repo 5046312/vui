@@ -3,7 +3,7 @@
         <v-demo :code="code.base">
             <div slot="desc">标签</div>
             <div>
-                <v-img height="180" width="180" radius="102" :cover="true" :thumb="true" :src='require("@/assets/01.jpg")'/>
+                <v-img height="180px" width="180px" radius="102px" :cover="true" :thumb="true" :src='require("@/assets/01.jpg")'/>
             </div>
         </v-demo>
     </v-layout>

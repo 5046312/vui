@@ -33,6 +33,8 @@ export default {
         thumbStyle(){
             const style = {}
             if(this.thumb) style.borderRadius = '4px'
+            if(this.height) style.height = this.height
+            if(this.width) style.width = this.width
             return style
         },
         imgStyle () {
@@ -40,9 +42,9 @@ export default {
             style.backgroundPosition = this.position;
             style.backgroundImage = 'url(' + this.src + ')'
             style.backgroundSize = '100% 100%'
-            if(this.height) style.height = this.height + 'px'
-            if(this.width) style.width = this.width + 'px'
-            if(this.radius && !this.thumb) style.borderRadius = this.radius + 'px'
+            if(this.height) style.height = this.height
+            if(this.width) style.width = this.width
+            if(this.radius && !this.thumb) style.borderRadius = this.radius
             if(this.cover) style.backgroundSize = 'cover'
             return style
         }
