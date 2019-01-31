@@ -1,0 +1,8 @@
+@import "../common/var";
+.vui-bread{
+    display: flex;
+    align-items: center;
+    .divide{
+        padding: 0 5px;
+    }
+}

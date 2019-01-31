@@ -18,6 +18,7 @@ import Pin from './components/pin'
 import Progress from './components/progress'
 import {Dot, Tag} from './components/tag'
 import Img from './components/img'
+import Bread from './components/bread'
 
 
 const install = Vue => {
@@ -36,6 +37,7 @@ const install = Vue => {
     Vue.component(Tag.name, Tag)
     Vue.component(Dot.name, Dot)
     Vue.component(Img.name, Img)
+    Vue.component(Bread.name, Bread)
 }
 export default {
     install,
