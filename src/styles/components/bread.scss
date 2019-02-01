@@ -2,7 +2,17 @@
 .vui-bread{
     display: flex;
     align-items: center;
+    user-select: none;
+    
+    .text{
+        color: #aaa;
+    }
+    .active{
+        color: $primary;
+        cursor: pointer;
+    }
     .divide{
         padding: 0 5px;
+        color: #eee;
     }
 }

@@ -1,8 +1,8 @@
 <template>
     <div class="vui-bread">
-        <div v-for="(item, index) in list" :key="index">
-            <v-icon v-if="item.icon" :type="item.icon" style="font-size: 16px"/>
-            <span>{{item.text}}</span>
+        <div v-for="(item, index) in list" :key="index" @click="$emit('click', item)">
+            <v-icon v-if="item.icon" :type="item.icon" style="font-size: 16px" :class='{active: item.active}'/>
+            <span class='text' :class='{active: item.active  && index != list.length - 1}'>{{item.text}}</span>
             <span class="divide" v-if="index != list.length - 1">{{divide}}</span>
         </div>
     </div>

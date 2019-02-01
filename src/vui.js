@@ -19,6 +19,7 @@ import Progress from './components/progress'
 import {Dot, Tag} from './components/tag'
 import Img from './components/img'
 import Bread from './components/bread'
+import Switch from './components/switch'
 
 
 const install = Vue => {
@@ -38,6 +39,7 @@ const install = Vue => {
     Vue.component(Dot.name, Dot)
     Vue.component(Img.name, Img)
     Vue.component(Bread.name, Bread)
+    Vue.component(Switch.name, Switch)
 }
 export default {
     install,

@@ -3,7 +3,7 @@
         <v-demo :code="code.base">
             <div slot="desc">标签</div>
             <div>
-                <v-bread :list="list"/>
+                <v-bread :list="list" @click="clickBread"/>
             </div>
         </v-demo>
     </v-layout>
@@ -16,13 +16,18 @@ export default {
         return {
             code,
             list: [
-                { icon: 'ios-home', text: '首页', path: '/'},
-                { icon: '', text: '文章', path: '/article'},
-                { text: '新增', path: '/new'},
+                { icon: 'ios-home', text: '首页', active: true},
+                { icon: '', text: '文章', active: false},
+                { text: '新增'},
             ]
         };
     },
-    methods: {}
+    methods: {
+        // 点击面包屑
+        clickBread(res) {
+            console.log(res)
+        }
+    }
 };
 </script>
 <style lang="scss" scoped>
