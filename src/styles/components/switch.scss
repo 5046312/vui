@@ -6,10 +6,25 @@
     box-sizing: border-box;
     align-self: center;
     user-select: none;
+    cursor: pointer;
+    overflow: hidden;
 
-    width: 52px;
+    width: 62px;
     border-radius: 16px;
     height: 32px;
+
+    &.small{
+        width: 52px;
+        border-radius: 13px;
+        height: 26px;
+    }
+
+    &.unselect>.icon:active::after{
+        width: 36px;
+    }
+    &.unselect>.icon.small:active::after{
+        width: 28px;
+    }
 
     &>.icon{
         z-index: 0;
@@ -21,59 +36,122 @@
         transition: .3s;
         box-sizing: border-box;
         display: block;
-        cursor: pointer;
+        background: #ddd;
 
-        width: 52px;
+        width: 62px;
         border-radius: 16px;
         height: 32px;
-        background: #e5e5e5;
 
         &::before{
             content: ' ';
             position: absolute;
             left: 2px;
             top: 2px;
-            width: 48px;
+            width: 58px;
             height: 28px;
             border-radius: 16px;
-            -webkit-box-sizing: border-box;
             box-sizing: border-box;
-            background: #fff;
+            background: #ddd;
             z-index: 1;
-            -webkit-transition-duration: .3s;
             transition-duration: .3s;
-            -webkit-transform: scale(1);
             transform: scale(1);
         }
-
+        
         &::after{
             height: 28px;
             width: 28px;
             top: 2px;
             left: 2px;
-            -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.3);
-            box-shadow: 0 2px 4px rgba(0,0,0,.3);
+            box-shadow: 1px 1px 3px rgba(0, 0, 0,.2);
             border-radius: 14px;
 
             background: #fff;
             position: absolute;
             z-index: 2;
-            -webkit-transform: translateX(0);
             transform: translateX(0);
-            -webkit-transition-duration: .3s;
             transition-duration: .3s;
 
             content: ' ';
         }
+
+        &.small{
+            width: 52px;
+            border-radius: 13px;
+            height: 26px;
+            &::before{
+                width: 48px;
+                border-radius: 11px;
+                height: 22px;
+            }
+            &::after{
+                height: 22px;
+                width: 22px;
+            }
+        }
     }
     
     &.select>.icon{
-        background: #4cd964;
+        &.primary{
+            background: $primary;
+        }
+        &.info{
+            background: $info;
+        }
+        &.warning{
+            background: $warn;
+        }
+        &.danger{
+            background: $danger;
+        }
+        &.success{
+            background: $success;
+        }
+        &.error{
+            background: $error;
+        }
         &::before{
             transform: scale(0);
         }
         &::after{
-            transform: translateX(20px);
+            transform: translateX(30px);
         }
+        &.small{
+            &::after{
+                transform: translateX(26px);
+            }
+        }
+    }
+
+    // 只读
+    &.readonly{
+        opacity: .5;
+        cursor: not-allowed;
+    }
+
+    // text
+    .text{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        line-height: 32px;
+        transition: all .3s;
+        color: #fff;
+        white-space: nowrap;
+        font-size: 14px;
+        &>.on{
+            position: absolute;
+            left: -22px;
+        }
+        &>.off{
+            position: absolute;
+            left: 35px;
+            height: 32px;
+            line-height: 32px;
+            display: inline-block;
+        }
+    }
+    &.select>.text{
+        transform: translateX(30px);
     }
 }
