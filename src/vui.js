@@ -20,6 +20,8 @@ import {Dot, Tag} from './components/tag'
 import Img from './components/img'
 import Bread from './components/bread'
 import Switch from './components/switch'
+import Radio from './components/radio'
+import Checkbox from './components/checkbox'
 
 
 const install = Vue => {
@@ -40,6 +42,8 @@ const install = Vue => {
     Vue.component(Img.name, Img)
     Vue.component(Bread.name, Bread)
     Vue.component(Switch.name, Switch)
+    Vue.component(Radio.name, Radio)
+    Vue.component(Checkbox.name, Checkbox)
 }
 export default {
     install,
