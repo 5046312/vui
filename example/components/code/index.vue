@@ -46,24 +46,22 @@ export default {
             });
         }
     },
-    computed: {
-        
-    }
+    computed: {}
 };
 </script>
 <style lang="scss">
-@import '@/style/base.scss';
+@import "@/style/base.scss";
 .vui-code {
     padding: 0;
     margin: 0;
     display: flex;
     position: relative;
-    .tip{
+    .tip {
         position: absolute;
         top: 10px;
         right: 20px;
         // 复制按钮
-        .copy{
+        .copy {
             border: 1px solid $primary;
             background: #fff;
             font-size: 12px;
@@ -71,6 +69,7 @@ export default {
             border-radius: 5px;
             padding: 0 8px;
             cursor: pointer;
+            user-select: none;
         }
     }
     .hljs-keyword,
@@ -79,76 +78,76 @@ export default {
     .hljs-title,
     .hljs-name,
     .hljs-tag {
-      color: $primary;
+        color: $primary;
     }
-  
+
     .hljs {
-      display: block;
-      overflow-x: auto;
-      color: $font;
-      -webkit-text-size-adjust: none;
-      padding: 20px;
+        display: block;
+        overflow-x: auto;
+        color: $font;
+        -webkit-text-size-adjust: none;
+        padding: 20px;
     }
     .hljs-doctype {
-      color: #999;
+        color: #999;
     }
     .hljs-attribute {
-      color: #e96900;
+        color: #e96900;
     }
     .hljs-value {
-      color: #42b983;
+        color: #42b983;
     }
     .hljs-keyword {
-      color: #e96900;
+        color: #e96900;
     }
     .hljs-string {
-      color: #42b983;
+        color: #42b983;
     }
     .hljs-comment {
-      color: #b3b3b3;
+        color: #b3b3b3;
     }
     .hljs-operator .hljs-comment {
-      color: #525252;
+        color: #525252;
     }
     .hljs-regexp {
-      color: #af7dff;
+        color: #af7dff;
     }
     .hljs-built_in {
-      color: #2db7f5;
+        color: #2db7f5;
     }
     .css .hljs-class {
-      color: #e96900;
+        color: #e96900;
     }
     .css .hljs-number,
     .javascript .hljs-number {
-      color: #fc1e70;
+        color: #fc1e70;
     }
     .css .hljs-attribute {
-      color: #af7dff;
+        color: #af7dff;
     }
     .css .hljs-important {
-      color: red;
+        color: red;
     }
     .actionscript .hljs-literal,
     .javascript .hljs-literal {
-      color: #fc1e70;
+        color: #fc1e70;
     }
     pre {
-      margin: 0;
-      height: 100%;
-      display: flex;
-      width: 100%;
+        margin: 0;
+        height: 100%;
+        display: flex;
+        width: 100%;
     }
     code {
-      display: inline-block;
-      font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
-      margin: 0 3px;
-      padding: 1px 5px;
-      border-radius: 3px;
-      color: $font;
-      background: none;
-      margin: 0;
-      padding: 0;
+        display: inline-block;
+        font-family: Consolas, Monaco, Andale Mono, Ubuntu Mono, monospace;
+        margin: 0 3px;
+        padding: 1px 5px;
+        border-radius: 3px;
+        color: $font;
+        background: none;
+        margin: 0;
+        padding: 0;
     }
-  }
+}
 </style>

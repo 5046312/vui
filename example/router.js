@@ -18,6 +18,8 @@ export const routerList = {
             { meta: { title: '布局' }, path: 'layout', component: () => import("@/views/components/layout") },
             { meta: { title: '栅格' }, path: 'grid', component: () => import("@/views/components/grid") },
             { meta: { title: '段落' }, path: 'paragraph', component: () => import("@/views/components/paragraph") },
+            { meta: { title: '顶部导航' }, path: 'navbar', component: () => import("@/views/components/navbar") },
+            { meta: { title: '底部导航' }, path: 'tabbar', component: () => import("@/views/components/tabbar") },
         ]
     },
     
@@ -28,8 +30,8 @@ export const routerList = {
             { meta: { title: '按钮' }, path: 'button', component: () => import("@/views/components/button") },
             { meta: { title: '进度' }, path: 'progress', component: () => import("@/views/components/progress") },
             { meta: { title: '标签' }, path: 'tag', component: () => import("@/views/components/tag") },
-            { meta: { title: '多选' }, path: 'checkbox', component: () => import("@/views/components/checkbox") },
             { meta: { title: '单选' }, path: 'radio', component: () => import("@/views/components/radio") },
+            { meta: { title: '多选' }, path: 'checkbox', component: () => import("@/views/components/checkbox") },
             { meta: { title: '开关' }, path: 'switch', component: () => import("@/views/components/switch") },
             { meta: { title: '面包屑' }, path: 'bread', component: () => import("@/views/components/bread") },
             { meta: { title: '图片' }, path: 'img', component: () => import("@/views/components/img") },

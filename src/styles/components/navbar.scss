@@ -1,0 +1,33 @@
+@import "../common/var";
+@mixin navbar-abs {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+.vui-navbar{
+    position: relative;
+    height: 50px;
+    &>.title{
+        @include navbar-abs;
+    }
+    &>.left{
+        @include navbar-abs;
+        left: 10px;
+        right: 40%;
+        justify-content: flex-start;
+        font-size: 16px;
+    }
+    &>.right{
+        @include navbar-abs;
+        left: 40%;
+        right: 10px;
+        justify-content: flex-end;
+        font-size: 16px;
+    }
+}

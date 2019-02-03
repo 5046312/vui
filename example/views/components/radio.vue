@@ -3,8 +3,8 @@
         <v-demo :code="code.base">
             <div slot="desc">单选</div>
             <div>
-                <v-radio v-model="value" />
-                <v-radio v-model="value" type="primary"/>
+                <v-radio v-model="value" val="苹果" />
+                <v-radio v-model="value" val="梨" />
             </div>
         </v-demo>
     </div>
@@ -16,6 +16,7 @@ export default {
     data() {
         return {
             code,
+            value: "苹果",
         };
     },
     methods: {

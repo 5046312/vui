@@ -16,13 +16,13 @@ import Hr from './components/hr'
 import Scrollspy from './components/scrollspy'
 import Pin from './components/pin'
 import Progress from './components/progress'
-import {Dot, Tag} from './components/tag'
+import { Dot, Tag } from './components/tag'
 import Img from './components/img'
 import Bread from './components/bread'
 import Switch from './components/switch'
 import Radio from './components/radio'
 import Checkbox from './components/checkbox'
-
+import Navbar from './components/navbar'
 
 const install = Vue => {
     Vue.component(Transition.name, Transition)
@@ -44,7 +44,9 @@ const install = Vue => {
     Vue.component(Switch.name, Switch)
     Vue.component(Radio.name, Radio)
     Vue.component(Checkbox.name, Checkbox)
+    Vue.component(Navbar.name, Navbar)
 }
+
 export default {
     install,
     $bar

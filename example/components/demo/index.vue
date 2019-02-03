@@ -5,7 +5,7 @@
                 <div class="desc" ref="desc" v-show="$slots.desc">
                     <slot name="desc"></slot>
                 </div>
-                <div class="show-style" ref="style" v-show="$slots.default">
+                <div class="show-style" ref="style" v-show="$slots.default" :style="{background: bgColor}">
                     <slot></slot>
                 </div>
             </div>
@@ -27,6 +27,9 @@ export default {
     props: {
         code: {
             default: ""
+        },
+        bgColor: {
+            default: '#fff'
         }
     },
     data() {
