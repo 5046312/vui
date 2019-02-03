@@ -24,6 +24,7 @@ import Radio from './components/radio'
 import Checkbox from './components/checkbox'
 import Navbar from './components/navbar'
 import Nav from './components/nav'
+import Page from './components/page'
 
 const install = Vue => {
     Vue.component(Transition.name, Transition)
@@ -47,6 +48,7 @@ const install = Vue => {
     Vue.component(Checkbox.name, Checkbox)
     Vue.component(Navbar.name, Navbar)
     Vue.component(Nav.name, Nav)
+    Vue.component(Page.name, Page)
 }
 
 export default {
