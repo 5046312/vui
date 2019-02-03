@@ -20,6 +20,7 @@ export const routerList = {
             { meta: { title: '段落' }, path: 'paragraph', component: () => import("@/views/components/paragraph") },
             { meta: { title: '顶部导航' }, path: 'navbar', component: () => import("@/views/components/navbar") },
             { meta: { title: '底部导航' }, path: 'tabbar', component: () => import("@/views/components/tabbar") },
+            { meta: { title: '导航' }, path: 'nav', component: () => import("@/views/components/nav") },
         ]
     },
     
