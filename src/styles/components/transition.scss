@@ -1,5 +1,6 @@
 @import '../common/var';
 @import '../common/animate';
 .vui-transition{
+    display: inline-block;
     animation-duration: .35s;
 }

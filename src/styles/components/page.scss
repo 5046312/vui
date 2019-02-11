@@ -1,4 +1,71 @@
 @import "../common/var";
 .vui-page{
-    
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin:0;
+    padding: 0;
+    list-style: none;
+
+    &>div{
+        display: inline-block;
+        box-sizing: border-box;
+        height: 30px;
+        width: 30px;
+        text-align: center;
+        line-height: 30px;
+        font-weight: bold;
+        font-size: 13px;
+        margin-right: 5px;
+        cursor: pointer;
+        &:hover{
+            color: $primary;
+        }
+    }
+
+    &>li{
+        font-size: 13px;
+        height: 30px;
+        width: 30px;
+        margin-right: 5px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+        transition: all .3s;
+        font-weight: bold;
+        user-select: none;
+        &:hover{
+            color: $primary;
+        }
+        &.disable{
+            cursor: not-allowed;
+            color: #eee;
+        }
+        &.current{
+            cursor: default;
+            box-sizing: border-box;
+            color: $primary;
+        }
+    }
+
+    // 显示边框
+    &.border{
+        &>div{
+            line-height: 32px;
+        }
+        &>li{
+            border: 1px solid #dde;
+            
+            &:hover{
+                border: 1px solid $primary;
+            }
+            &.disable{
+                border: 1px solid #eee;
+            }
+            &.current{
+                border: 1px solid $primary;
+            }
+        }
+    }
 }

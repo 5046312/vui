@@ -1,10 +1,10 @@
 <template>
     <v-layout>
         <div class='main-contain'>
-            <demo :code="base">
+            <v-demo :code="base">
                 <div slot="desc">Toast 吐司</div>
                 <v-button @click="showToast">弹出一个Toast</v-button>
-            </demo>
+            </v-demo>
         </div>
     </v-layout>
 </template>

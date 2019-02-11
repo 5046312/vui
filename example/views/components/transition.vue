@@ -9,7 +9,7 @@
                 </div>
                 <v-button @click="showFade = !showFade;">fade</v-button>
                 <v-transition name="fade">
-                    <div v-show="showFade">name = fade</div>
+                    <span v-show="showFade">name = fade</span>
                 </v-transition>
             </v-demo>
         </div>

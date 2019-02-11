@@ -1,10 +1,19 @@
 <template>
     <v-layout>
         <div style="padding: 50px;">
-            <v-demo :code="base" bgColor="#eee">
-                <div slot="desc">顶部导航</div>
+            <v-demo>
+                <div slot="desc">分页 Page</div>
                 <div>
-                    <v-page></v-page>
+                    <v-page v-model="page" :total="15"></v-page>
+                    <br>
+                    <v-page v-model="page" :total="15" border></v-page>
+                    <br>
+
+                    
+                    <v-page v-model="page" :total="5"></v-page>
+                    <br>
+                    <v-page v-model="page" :total="5" border></v-page>
+                    <br>
                 </div>
             </v-demo>
         </div>
@@ -17,13 +26,10 @@ export default {
     data() {
         return {
             base: code.base,
-            list: [],
-            index: 0,
+            page: 1
         };
     },
-    methods: {
-        
-    }
+    methods: {}
 };
 </script>
 <style lang="scss" scoped>

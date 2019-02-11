@@ -61,6 +61,7 @@ export const routerList = {
             // { meta: { title: '钉' }, path: 'pin', component: () => import("@/views/components/pin") },
             { meta: { title: '回到顶部' }, path: 'top', component: () => import("@/views/components/top") },
             { meta: { title: '分页' }, path: 'page', component: () => import("@/views/components/page") },
+            { meta: { title: '轮播' }, path: 'sliderbox', component: () => import("@/views/components/sliderbox") },
         ]
     },
 }

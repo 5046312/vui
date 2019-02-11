@@ -13,8 +13,10 @@
         justify-content: center;
         height: 100%;
         transition: all .3s;
+        cursor: pointer;
         &.active{
             color: $primary;
+            cursor: default;
         }
     }
 
