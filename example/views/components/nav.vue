@@ -1,6 +1,6 @@
 <template>
     <v-layout>
-        <div style="padding: 50px;">
+        <div>
             <v-demo :code="base" bgColor="#eee">
                 <div slot="desc">顶部导航</div>
                 <div>
@@ -8,7 +8,6 @@
                     <v-nav :list="list" v-model="index"></v-nav>
                 </div>
             </v-demo>
-
         </div>
     </v-layout>
 </template>
