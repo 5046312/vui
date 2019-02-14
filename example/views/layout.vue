@@ -60,7 +60,9 @@ export default {
         height: 100%;
         width: 30%;
         overflow-y: hidden;
-        max-width: 340px;
+        max-width: 240px;
+        padding-bottom: 80px;
+        box-sizing: border-box;
         &:hover {
             overflow-y: scroll;
             @include scrollbar(0.4);

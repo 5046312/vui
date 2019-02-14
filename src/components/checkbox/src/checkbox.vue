@@ -1,6 +1,9 @@
 <template>
-    <span class="vui-checkbox" :class="{active: checked}" @click="checkHandle">
-        <v-icon type="ios-checkmark" v-if="checked"/>
+    <span class="vui-checkbox" @click="checkHandle">
+        <span class="checkbox" :class="{active: checked}">
+            <v-icon type="ios-checkmark" v-if="checked"/>
+        </span>
+        <span class="label"><slot /></span>
     </span>
 </template>
 <script>

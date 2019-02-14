@@ -10,12 +10,8 @@ export default {
     name: 'v-navbar',
     props: {
         title: String,
-        bgColor: {
-            default: '#fff'
-        },
-        color: {
-            default: '#333'
-        }
+        bgColor: String,
+        color: { default: '#fff' }
     },
 
     computed: {

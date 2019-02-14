@@ -18,6 +18,9 @@
             color: $primary;
             cursor: default;
         }
+        &:hover{
+            color: $primary;
+        }
     }
 
     &>.bar{
@@ -29,7 +32,7 @@
         &>.line{
             height: 100%;
             background: $primary;
-            transition: all .3s;
+            transition: all .3s ease-out;
         }
     }
 }

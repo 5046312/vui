@@ -1,8 +1,8 @@
 @import "../common/var";
 .vui-sliderbox{
-    background: #ddd;
     position: relative;
     overflow: hidden;
+    min-height: 200px;
     // slider
     &>.slider{
         height: 100%;
@@ -12,11 +12,11 @@
         bottom: 0;
         display: flex;
         justify-content: start;
-        transition: all .6s;
+        transition: all .3s ease-out;
     }
 
     // 左右按钮
-    &>.nav{
+    &>.controll{
         position: absolute;
         top: 0;
         bottom: 0;
@@ -60,13 +60,14 @@
         &>.dot{
             height: 20px;
             width: 20px;
+            border-radius: 20px;
             margin: 0 4px;
             transition: all .3s;
-            background: #eee;
+            background: #bbb;
             cursor: pointer;
             &.active{
                 transition: all .6s;
-                background: red;
+                background: #fff;
                 cursor: default;
             }
         }

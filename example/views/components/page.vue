@@ -1,7 +1,7 @@
 <template>
     <v-layout>
         <div style="padding: 50px;">
-            <v-demo>
+            <v-demo :code="code.base">
                 <div slot="desc">分页 Page</div>
                 <div>
                     <v-page v-model="page" :total="15"></v-page>
@@ -20,12 +20,12 @@
     </v-layout>
 </template>
 <script>
-import code from "@/codes/toast";
+import code from "@/codes/page";
 export default {
     components: {},
     data() {
         return {
-            base: code.base,
+            code,
             page: 1
         };
     },

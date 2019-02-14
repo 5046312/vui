@@ -1,49 +1,75 @@
 <template>
     <div class="vui-sliderbox">
-        <div class='slider' :style="sliderboxStyle">
+        <div class="slider" :style="sliderboxStyle">
             <slot></slot>
         </div>
-        <div class='nav'>
-            <div class='left' @click='prev'><v-icon type="ios-arrow-back" /></div>
-            <div class='right' @click='next'><v-icon type="ios-arrow-forward" /></div>
+        <div class="controll" v-if="controll">
+            <div class="left" @click="prev">
+                <v-icon type="ios-arrow-back"/>
+            </div>
+            <div class="right" @click="next">
+                <v-icon type="ios-arrow-forward"/>
+            </div>
         </div>
-        <div class='step'>
-            <div class='dot' :class="{active: _index == index}" v-for="(item, _index) in total" :key="_index" @click="index = _index"></div>
+        <div class="step" v-if="step">
+            <div
+                class="dot"
+                :class="{active: _index == value}"
+                v-for="(item, _index) in total"
+                :key="_index"
+                @click="$emit('input', _index)"
+            ></div>
         </div>
     </div>
 </template>
 <script>
 export default {
     name: "v-sliderbox",
-    props: {},
-    data(){
-        return {
-            index: 0, // 当前索引
-            total: 3, // 总页数
-            width: 0, // 单个slider宽度
-        }
+    props: {
+        value: Number, // 当前索引
+        autoplay: Number, // 自动切换下一张的时间间隔（秒）
+        loop: Boolean, // 是否循环播放
+        controll: Boolean, // 显示左右切换按钮
+        step: Boolean // 显示底部进步器
     },
-    mounted(){
-        this.total = this.$slots.default.length
+    data() {
+        return {
+            total: 3, // 总页数
+            width: 0 // 单个slider宽度
+        };
+    },
+    mounted() {
+        this.total = this.$slots.default.length;
+        if(this.autoplay > 0){
+            const autoplayFunc = () => {
+                setTimeout(() => {
+                    this.next()
+                    autoplayFunc()
+                }, this.autoplay)
+            }
+            autoplayFunc()
+        }
     },
     methods: {
         // 上一页
-        prev(){
-            this.index --
-            if(this.index < 0) this.index = this.total - 1
+        prev() {
+            const target = this.value - 1;
+            if (target < 0) return this.$emit("input", this.total - 1);
+            this.$emit("input", target);
         },
 
         // 下一页
-        next(){
-            this.index ++
-            if(this.index > this.total - 1) this.index = 0
+        next() {
+            const target = this.value + 1;
+            if (target > this.total - 1) return this.$emit("input", 0);
+            this.$emit("input", target);
         }
     },
     computed: {
-        sliderboxStyle(){
+        sliderboxStyle() {
             return {
-                left: `-${this.index * 100}%`
-            }
+                left: `-${this.value * 100}%`
+            };
         }
     }
 };

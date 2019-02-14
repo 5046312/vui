@@ -1,7 +1,7 @@
 <template>
     <v-layout>
         <div class="main-contain">
-            <v-demo :code="base">
+            <v-demo :code="code.base">
                 <div slot="desc">
                     <div>水平比例栅格，采用和Bootstrap一致的设定，最多12列，由width属性百分比来进行宽度设置，根据父容器宽度子容器进行适应</div>
                     <div>
@@ -24,7 +24,7 @@
                 </div>
             </v-demo>
 
-            <v-demo :code="base">
+            <v-demo :code="code.gutter">
                 <div slot="desc">
                     <div>v-row组件支持间隔gutter设置，为相邻两v-col组件的px间距</div>
                 </div>
@@ -43,7 +43,7 @@
                 </div>
             </v-demo>
 
-            <v-demo :code="base">
+            <v-demo :code="code.margin">
                 <div slot="desc">
                     <div>v-row组件支持外边距margin设置，为v-row组件设置px外边距</div>
                 </div>
@@ -57,7 +57,7 @@
                 </v-row>
             </v-demo>
 
-            <v-demo :code="base">
+            <v-demo :code="code.justify">
                 <div slot="desc">
                     <div>v-row组件支持不同的v-col水平方向对其方式 justify</div>
                 </div>
@@ -116,7 +116,7 @@
                 </v-row>
             </v-demo>
 
-            <v-demo :code="base">
+            <v-demo :code="code.align">
                 <div slot="desc">
                     <div>v-row组件支持不同的v-col垂直方向对其方式 align</div>
                 </div>
@@ -163,7 +163,7 @@
                 <div style="height: 20px;"></div>
             </v-demo>
 
-            <v-demo :code="base">
+            <v-demo :code="code.order">
                 <div slot="desc">
                     <div>v-col组件支持排序。order小的排在前</div>
                 </div>
@@ -183,9 +183,9 @@
                 </v-row>
             </v-demo>
 
-            <v-demo :code="base">
+            <v-demo :code="code.offset">
                 <div slot="desc">
-                    <div>v-col组件支持相对左侧偏移量，offset值仍为所占份数</div>
+                    <div>v-col组件支持相对左侧偏移量，offset值为该元素在本行所占份数</div>
                 </div>
                 <v-row class="block-bg">
                     <v-col width="4" offset="1">
@@ -216,12 +216,12 @@
     </v-layout>
 </template>
 <script>
-import code from "@/codes/toast";
+import code from "@/codes/grid";
 export default {
     components: {},
     data() {
         return {
-            base: code.base
+            code,
         };
     },
     methods: {

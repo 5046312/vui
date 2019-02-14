@@ -16,7 +16,7 @@
     </v-layout>
 </template>
 <script>
-import code from "@/codes/toast";
+import code from "@/codes/transition";
 export default {
     components: {},
     data() {
