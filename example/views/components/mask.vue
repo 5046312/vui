@@ -7,6 +7,13 @@
                 </div>
                 <v-button @click="showMaskSchedule">弹出一个Mask遮罩，1s后关闭</v-button>
             </v-demo>
+
+            <v-demo :code="base">
+                <div slot="desc">
+                    在show函数中传入点击mask的回调函数
+                </div>
+                <v-button @click="showMaskCallback">设置回调</v-button>
+            </v-demo>
         </div>
     </v-layout>
 </template>
@@ -23,8 +30,15 @@ export default {
         showMaskSchedule(){
             this.$mask.show();
             setTimeout(() => {
-                this.$mask.close();
+                this.$mask.hide();
             }, 2000);
+        },
+        // 设置回调
+        showMaskCallback(){
+            this.$mask.show(() => {
+                this.$mask.hide()
+                this.$toast("执行回调函数")
+            })
         }
     }
 };

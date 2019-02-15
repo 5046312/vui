@@ -26,6 +26,7 @@ import Navbar from './components/navbar'
 import Nav from './components/nav'
 import Page from './components/page'
 import { Sliderbox, Slider } from './components/sliderbox'
+import Popup from './components/popup'
 
 const install = Vue => {
     Vue.component(Transition.name, Transition)
@@ -52,6 +53,7 @@ const install = Vue => {
     Vue.component(Page.name, Page)
     Vue.component(Sliderbox.name, Sliderbox)
     Vue.component(Slider.name, Slider)
+    Vue.component(Popup.name, Popup)
 }
 
 export default {

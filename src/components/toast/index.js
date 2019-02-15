@@ -3,7 +3,7 @@ import Toast from './src/toast'
 
 let instance;
 let timer;
-function getInstance(data) {
+function getInstance() {
     if (!instance) {
         const constructor = Vue.extend(Toast);
         instance = new constructor({
@@ -11,16 +11,17 @@ function getInstance(data) {
         });
         document.body.appendChild(instance.$el);
     }
-    instance.msg = data.msg
-    instance.duration = data.duration
     return instance;
 }
 
-Vue.prototype.$toast = (msg = 'toast', duration = '2') => {
-    getInstance({ msg, duration }).show = true
-    clearTimeout(timer)
-    timer = setTimeout(() => {
-        clearTimeout(timer);
-        instance.show = false
-    }, instance.duration + 100);
-};
+Vue.prototype.$toast = {
+    show(msg, duration = 2000) {
+        getInstance().msg = msg
+        getInstance().show = true
+        clearTimeout(timer)
+        timer = setTimeout(() => this.hide(), duration)
+    },
+    hide() {
+        getInstance().show = false
+    }
+}

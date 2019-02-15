@@ -4,7 +4,7 @@
             class="vui-mask"
             v-show="show"
             :style="{background: color, zIndex: zindex}"
-            @click.stop.prevent="$emit('click', '')"
+            @click.stop.prevent="callback && callback()"
         ></div>
     </v-transition>
 </template>
@@ -15,6 +15,7 @@ export default {
         return {
             opacity: "0.6",
             zindex: 1000,
+            callback: null,
             show: false
         };
     },
@@ -24,7 +25,7 @@ export default {
         }
     },
     methods: {
-        close() {
+        hide() {
             this.show = false;
         }
     }

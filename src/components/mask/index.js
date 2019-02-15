@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Mask from './src/mask'
 
 let instance;
-function getInstance() {
+function getInstance(callback) {
     if (!instance) {
         const constructor = Vue.extend(Mask);
         instance = new constructor({
@@ -10,11 +10,12 @@ function getInstance() {
         });
         document.body.appendChild(instance.$el);
     }
+    instance.callback = callback
     return instance;
 }
 
 Vue.prototype.$mask = {
-    show:() =>  getInstance().show = true,
-    close:() =>  getInstance().show = false,
+    show(callback = null) { getInstance(callback).show = true },
+    hide() { getInstance().show = false }
 };
 
