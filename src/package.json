@@ -1,0 +1,22 @@
+{
+  "name": "vui-ui",
+  "version": "1.0.3",
+  "description": "vue ui",
+  "main": "vui.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5046312/vui.git"
+  },
+  "keywords": [
+    "vui"
+  ],
+  "author": "gojang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/5046312/vui/issues"
+  },
+  "homepage": "https://github.com/5046312/vui#readme"
+}
