@@ -16,7 +16,7 @@ export default {
             clipboard.on("success", e => {
                 e.clearSelection();
                 clipboard.destroy();
-                this.$toast("已复制图标代码");
+                this.$toast.show("已复制图标代码");
             });
         }
     }

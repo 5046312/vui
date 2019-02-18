@@ -1,0 +1,124 @@
+@import "../common/var";
+.vui-select{
+    display: inline-flex;
+    position: relative;
+    user-select: none;
+    outline: none;
+
+    &:not(.disabled){
+        &:hover,&:active,&:focus{
+            &>.main{
+                border: 1px solid $primary;
+            }
+        }
+    }
+
+    // select禁用
+    &.disabled{
+        &>.main{
+            border: 1px solid #ddd;
+            background: rgb(245, 245, 245);
+            color: #aaa;
+            cursor: not-allowed;
+        }
+    }
+    
+    &>.main{
+        position: relative;
+        line-height: 40px;
+        width: 200px;
+        border: 1px solid #aaa;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all .3s;
+        // option 展开时
+        &.active{
+            border: 1px solid $primary;
+            box-shadow: 0px 0px 3px $primary;
+        }
+
+        &>.value{
+            height: 100%;
+            width: 100%;
+            padding-left: 14px;
+            &>.empty{
+                color: #bbb;
+            }
+        }
+        
+        // 方向和删除图标
+        &>.arrow, &>.del{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            line-height: 20px;
+            width: 20px;
+            text-align: center;
+            transition: all .3s;
+            font-size: 20px;
+            color: #aaa;
+        }
+
+        &>.arrow.down{
+            transform: rotate(180deg);
+        }
+    }
+
+    &>.option-panel{
+        width: 100%;
+        position: absolute;
+        top: 55px;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        padding: 5px 0;
+        background: #fff;
+        box-shadow: 2px 2px 5px #eee;
+        z-index: 800;
+        // 小三角
+        &>.angle{
+            position: absolute;
+            top:  -8px;
+            left: 25px;
+            width: 0px;
+            height: 0px;
+            border-bottom: #eee solid;
+            border-right: transparent solid;
+            border-left: transparent solid;
+            border-width: 8px;
+            &:after{
+                content: ' ';
+                position: absolute;
+                top: 1px;
+                top:  1.5px;
+                left: -9px;
+                width: 0px;
+                height: 0px;
+                border-bottom: #fff solid;
+                border-right: transparent solid;
+                border-left: transparent solid;
+                border-width: 9px;
+            }
+
+        }
+        &>.vui-option{
+            padding-left: 14px;
+            line-height: 40px;
+            cursor: pointer;
+
+            &:not(.disabled).hover{
+                background: #eee;
+            }
+
+            &.select{
+                font-weight: bold;
+                color: $primary;
+            }
+            
+            // option禁用
+            &.disabled{
+                cursor: not-allowed;
+                color: #ddd;
+            }
+        }
+    }
+}

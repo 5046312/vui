@@ -23,7 +23,7 @@ export const routerList = {
             { meta: { title: '导航' }, path: 'nav', component: () => import("@/views/components/nav") },
         ]
     },
-    
+
     basic: {
         title: '基础控件',
         children: [
@@ -37,11 +37,11 @@ export const routerList = {
             { meta: { title: '分割线' }, path: 'hr', component: () => import("@/views/components/hr") },
         ]
     },
-
     form: {
         title: '表单',
         children: [
-            { meta: { title: '输入框' }, path: 'input', component: () => import("@/views/components/button") },
+            // { meta: { title: '输入框' }, path: 'input', component: () => import("@/views/components/input") },
+            { meta: { title: '选择器' }, path: 'select', component: () => import("@/views/components/select") },
             { meta: { title: '单选' }, path: 'radio', component: () => import("@/views/components/radio") },
             { meta: { title: '多选' }, path: 'checkbox', component: () => import("@/views/components/checkbox") },
             { meta: { title: '开关' }, path: 'switch', component: () => import("@/views/components/switch") },
@@ -54,6 +54,7 @@ export const routerList = {
             { meta: { title: '遮罩' }, path: 'mask', component: () => import("@/views/components/mask") },
             { meta: { title: '吐司' }, path: 'toast', component: () => import("@/views/components/toast") },
             { meta: { title: '弹出层' }, path: 'popup', component: () => import("@/views/components/popup") },
+            // { meta: { title: '提示' }, path: 'tip', component: () => import("@/views/components/tip") },
             // { meta: { title: '加载' }, path: 'loading', component: () => import("@/views/components/loading") },
             // { meta: { title: '确认' }, path: 'confirm', component: () => import("@/views/components/confirm") },
             // { meta: { title: '模态框' }, path: 'modal', component: () => import("@/views/components/modal") },
@@ -66,12 +67,11 @@ export const routerList = {
     },
 }
 
- const docRouter = new router({
+const docRouter = new router({
     mode: "hash",
     routes: [
         // 首页
         { path: '/', component: () => import('@/views/index') },
-
         // 介绍
         {
             path: '/intro',
@@ -79,15 +79,6 @@ export const routerList = {
             redirect: 'intro/introduce',
             children: routerList.intro.children
         },
-
-        // 基础控件
-        {
-            path: '/basic',
-            component: () => import("@/views/layout"),
-            redirect: 'basic/icon',
-            children: routerList.basic.children
-        },
-
         // 布局管理
         {
             path: '/layout',
@@ -95,7 +86,20 @@ export const routerList = {
             redirect: 'layout/button',
             children: routerList.layout.children
         },
-
+        // 基础控件
+        {
+            path: '/basic',
+            component: () => import("@/views/layout"),
+            redirect: 'basic/icon',
+            children: routerList.basic.children
+        },
+        // 表单
+        {
+            path: '/form',
+            component: () => import("@/views/layout"),
+            redirect: 'form/input',
+            children: routerList.form.children
+        },
         // 常用
         {
             path: '/common',
@@ -103,7 +107,6 @@ export const routerList = {
             redirect: 'common/mask',
             children: routerList.common.children
         },
-
         { path: '*', component: () => import('@/views/404') },
     ]
 })
