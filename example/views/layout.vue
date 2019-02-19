@@ -103,7 +103,7 @@ export default {
     // router-view
     & > .content {
         flex: 1;
-        overflow-y: scroll;
+        overflow: scroll;
         background: #fff;
         height: 100%;
         @include scrollbar(1);
