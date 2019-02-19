@@ -28,6 +28,7 @@ import Page from './components/page'
 import { Sliderbox, Slider } from './components/sliderbox'
 import Popup from './components/popup'
 import { Select, Option } from './components/select'
+import Tip from './components/tip'
 
 const install = Vue => {
     Vue.component(Transition.name, Transition)
@@ -57,6 +58,7 @@ const install = Vue => {
     Vue.component(Popup.name, Popup)
     Vue.component(Select.name, Select)
     Vue.component(Option.name, Option)
+    Vue.component(Tip.name, Tip)
 }
 
 export default {

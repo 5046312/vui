@@ -1,0 +1,43 @@
+@import "../common/var";
+.vui-tip{
+    display: inline-block;
+    position: relative;
+    &>.tip {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 999;
+        font-size: 12px;
+        
+        // 三角
+        &>.angle{
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            border-top: rgba(70,76,91,.9) solid;
+            border-right: transparent solid;
+            border-left: transparent solid;
+            border-width: 8px;
+            &[place-before=top]{
+                bottom:  -8px;
+                left: 50%;
+                margin-left: -5px;
+                &[place-after=left]{ left: 15px; }
+                &[place-after=right]{ right: 15px; }
+            }
+        }
+        &>.msg{
+            line-height: 1.5;
+            max-width: 250px;
+            min-width: 60px;
+            text-align: center;
+            padding: 8px 12px;
+            color: #fff;
+            text-decoration: none;
+            background-color: rgba(70,76,91,.9);
+            border-radius: 4px;
+            box-shadow: 0 1px 6px rgba(0,0,0,.2);
+            white-space: nowrap;
+        }
+    }
+}

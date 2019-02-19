@@ -5,10 +5,10 @@
                 <span v-show="label">{{label}}</span>
                 <span class='empty' v-show="!label">请选择</span>
             </div>
-            <div class='arrow' v-show="!del || !hover" :class='{down: showOptions}' @click="switchShowOptions">
+            <div class='arrow' v-show="!label || !del || !hover" :class='{down: showOptions}' @click="switchShowOptions">
                 <v-icon type="ios-arrow-down" />
             </div>
-            <div class='del' v-show="del && hover" @click='showOptions = false;$emit("input", "")'>
+            <div class='del' v-show="del && hover && label" @click='showOptions = false;$emit("input", "")'>
                 <v-icon type="ios-close-circle" />
             </div>
         </div>
