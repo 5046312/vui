@@ -27,7 +27,11 @@ export default {
         // 清除其他hover，在设置当前hover
         clearOthersAndHover(){
             if(this.disabled) return
-            this.$parent.$slots.default.map(vnode => vnode.componentInstance.hover = false)
+            this.$parent.$slots.default.map(vnode => {
+                if(vnode.componentOptions && vnode.componentOptions.tag == 'v-option') {
+                    vnode.componentInstance.hover = false
+                }
+            })
             this.hover = true
         }
     },

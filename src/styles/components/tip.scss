@@ -4,28 +4,69 @@
     position: relative;
     &>.tip {
         position: absolute;
-        top: 100%;
-        left: 0;
         z-index: 999;
         font-size: 12px;
-        
+
         // 三角
         &>.angle{
             position: absolute;
             width: 0px;
             height: 0px;
-            border-top: rgba(70,76,91,.9) solid;
-            border-right: transparent solid;
-            border-left: transparent solid;
-            border-width: 8px;
-            &[place-before=top]{
+        }
+        
+        // 上
+        &[place-before=top]{
+            &>.angle{
+                border-top: rgba(70,76,91,.9) solid;
+                border-right: transparent solid;
+                border-left: transparent solid;
+                border-width: 8px;
+                
                 bottom:  -8px;
-                left: 50%;
-                margin-left: -5px;
-                &[place-after=left]{ left: 15px; }
-                &[place-after=right]{ right: 15px; }
+                margin-left: -8px;
             }
         }
+
+        // 下
+        &[place-before=bottom]{
+            &>.angle{
+                border-bottom: rgba(70,76,91,.9) solid;
+                border-right: transparent solid;
+                border-left: transparent solid;
+                border-width: 8px;
+
+                top:  -8px;
+                margin-left: -8px;
+            }
+        }
+
+        // 左
+        &[place-before=left]{
+            &>.angle{
+                border-left: rgba(70,76,91,.9) solid;
+                border-top: transparent solid;
+                border-bottom: transparent solid;
+                border-width: 8px;
+
+                right:  -8px;
+                margin-top: -8px;
+            }
+        }
+
+        // 右
+        &[place-before=right]{
+            &>.angle{
+                border-right: rgba(70,76,91,.9) solid;
+                border-top: transparent solid;
+                border-bottom: transparent solid;
+                border-width: 8px;
+
+                left:  -8px;
+                margin-top: -8px;
+            }
+        }
+
+        
         &>.msg{
             line-height: 1.5;
             max-width: 250px;

@@ -40,7 +40,7 @@ export const routerList = {
     form: {
         title: '表单',
         children: [
-            // { meta: { title: '输入框' }, path: 'input', component: () => import("@/views/components/input") },
+            { meta: { title: '输入框' }, path: 'input', component: () => import("@/views/components/input") },
             { meta: { title: '选择器' }, path: 'select', component: () => import("@/views/components/select") },
             { meta: { title: '单选' }, path: 'radio', component: () => import("@/views/components/radio") },
             { meta: { title: '多选' }, path: 'checkbox', component: () => import("@/views/components/checkbox") },

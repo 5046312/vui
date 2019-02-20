@@ -2,7 +2,7 @@
     <div id="layout">
         <div class="nav">
             <router-link class="title" to="/" tag="div">Vui</router-link>
-            <div v-for="(part, index) in list" :key="index">
+            <div v-for="(part, index) in routerList" :key="index">
                 <div class="part-title">{{part.title}}</div>
                 <div class="part-item">
                     <router-link
@@ -20,15 +20,8 @@
 <script>
 import { routerList } from "@/router";
 export default {
-    data() {
-        return {};
-    },
-    computed: {
-        list() {
-            return routerList;
-        }
-    }
-};
+    data() { return { routerList } }
+}
 </script>
 <style lang="scss">
 @mixin scrollbar($opacity) {
@@ -55,24 +48,26 @@ export default {
 #layout {
     display: flex;
     height: 100%;
+    position: relative;
     & > .nav {
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
         background: #f9f9f9;
         height: 100%;
-        width: 30%;
+        width: 240px;
         overflow-y: hidden;
-        max-width: 240px;
         padding-bottom: 80px;
         box-sizing: border-box;
         &:hover {
             overflow-y: scroll;
             @include scrollbar(0.4);
         }
-
         .title {
             padding: 20px;
             cursor: pointer;
         }
-
         & > div {
             margin-bottom: 10px;
         }
@@ -81,7 +76,6 @@ export default {
             border-bottom: 1px dashed #eee;
             cursor: default;
         }
-
         .part-item {
             padding: 10px 0;
             & > div {
@@ -93,7 +87,6 @@ export default {
                 &:hover {
                     color: #4dabf7;
                 }
-
                 &.router-link-active {
                     color: #4dabf7;
                 }
@@ -102,6 +95,7 @@ export default {
     }
     // router-view
     & > .content {
+        padding-left: 240px;
         flex: 1;
         overflow: scroll;
         background: #fff;
