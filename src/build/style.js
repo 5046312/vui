@@ -18,8 +18,8 @@ gulp.task('css', function () {
 
 // 字体
 gulp.task('fonts', function () {
-    gulp.src('../src/styles/components/icon/fonts/*.*')
-        .pipe(gulp.dest('../dist/styles/fonts'));
+    gulp.src('../styles/components/icon/fonts/*.*')
+        .pipe(gulp.dest('../dist/styles'));
 });
 
 gulp.task('default', gulp.series('css', 'fonts'))
