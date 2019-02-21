@@ -4,7 +4,7 @@
     "description": "vue-ui, A growing UI Toolkit built on Vue.js.",
     "main": "vui.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "dist:style": "gulp --gulpfile build/style.js"
     },
     "repository": {
         "type": "git",
@@ -24,5 +24,13 @@
     "bugs": {
         "url": "https://github.com/5046312/vui/issues"
     },
-    "homepage": "https://github.com/5046312/vui#readme"
+    "homepage": "https://github.com/5046312/vui#readme",
+    "dependencies": {
+        "gulp": "^4.0.0",
+        "gulp-autoprefixer": "^6.0.0",
+        "gulp-clean-css": "^4.0.0",
+        "gulp-rename": "^1.4.0",
+        "gulp-sass": "^4.0.2",
+        "gulp-scss": "^1.4.0"
+    }
 }
