@@ -4,7 +4,9 @@ import LoadingBar from './src/bar'
 
 // loading bar
 class Bar {
-    instance = null
+    constructor(){
+        this.instance = null
+    }
     static getInstance() {
         if (!this.instance) {
             const constructor = Vue.extend(LoadingBar);

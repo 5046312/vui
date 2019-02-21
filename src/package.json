@@ -1,28 +1,28 @@
 {
-  "name": "vui-ui",
-  "version": "1.0.5",
-  "description": "vue-ui, A growing UI Toolkit built on Vue.js.",
-  "main": "vui.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/5046312/vui.git"
-  },
-  "keywords": [
-    "vui",
-    "vue",
-    "vue.js",
-    "component",
-    "components",
-    "ui",
-    "framework"
-  ],
-  "author": "gojang",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/5046312/vui/issues"
-  },
-  "homepage": "https://github.com/5046312/vui#readme"
+    "name": "vui-ui",
+    "version": "1.0.7",
+    "description": "vue-ui, A growing UI Toolkit built on Vue.js.",
+    "main": "vui.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/5046312/vui.git"
+    },
+    "keywords": [
+        "vui",
+        "vue",
+        "vue.js",
+        "component",
+        "components",
+        "ui",
+        "framework"
+    ],
+    "author": "gojang",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/5046312/vui/issues"
+    },
+    "homepage": "https://github.com/5046312/vui#readme"
 }
