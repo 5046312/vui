@@ -6,7 +6,7 @@ const autoprefixer = require('gulp-autoprefixer');
 
 // css
 gulp.task('css', function () {
-    gulp.src('../styles/index.scss')
+    return gulp.src('../styles/index.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 2 versions', 'ie > 8']
@@ -18,7 +18,7 @@ gulp.task('css', function () {
 
 // 字体
 gulp.task('fonts', function () {
-    gulp.src('../styles/components/icon/fonts/*.*')
+    return gulp.src('../styles/components/icon/fonts/*.*')
         .pipe(gulp.dest('../dist/styles'));
 });
 
