@@ -63,6 +63,11 @@ const install = Vue => {
     Vue.component(Input.name, Input)
 }
 
+// auto install
+if (typeof window !== 'undefined' && window.Vue) {
+    install(window.Vue);
+}
+
 export default {
     install,
     $bar
