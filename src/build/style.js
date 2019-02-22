@@ -22,4 +22,4 @@ gulp.task('fonts', function () {
         .pipe(gulp.dest('../dist/styles'));
 });
 
-gulp.task('default', gulp.series('css', 'fonts'))
+gulp.task('default', gulp.parallel('css', 'fonts'))
