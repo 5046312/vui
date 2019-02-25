@@ -1,5 +1,4 @@
 const path = require('path');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { VueLoaderPlugin } = require('vue-loader');
 module.exports = {
     mode: 'production',
@@ -39,12 +38,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new HtmlWebpackPlugin({
-            title: 'vui',
-            inject: 'body',
-            filename: 'index.html',
-            template: path.resolve(__dirname, "index.html")
-        }),
         new VueLoaderPlugin(),
     ]
 };
