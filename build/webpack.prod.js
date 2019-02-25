@@ -7,7 +7,7 @@ module.exports = {
     },
     output: {
         path: path.resolve(process.cwd(), './dist/'),
-        filename: 'vui.js',
+        filename: 'vui.min.js'
     },
     resolve: {
         extensions: ['.js', '.vue', '.json'],
