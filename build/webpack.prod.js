@@ -22,18 +22,6 @@ module.exports = {
             {
                 test: /\.vue$/,
                 use: 'vue-loader'
-            },
-            {
-                test: /\.scss$/,
-                use: ['style-loader', 'css-loader', 'sass-loader'],
-            },
-            {
-                test: /\.(svg|otf|ttf|woff2?|eot|gif|png|jpe?g)(\?\S*)?$/,
-                loader: 'url-loader',
-                query: {
-                    limit: 10000,
-                    name: path.posix.join('static', '[name].[hash:7].[ext]')
-                }
             }
         ]
     },
