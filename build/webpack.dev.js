@@ -1,7 +1,7 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const VueLoaderPlugin = require('vue-loader/lib/plugin'); //引入这行
+const { VueLoaderPlugin } = require('vue-loader');
+const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 
 module.exports = {
     entry: {
@@ -31,6 +31,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new FriendlyErrorsPlugin(),
         new VueLoaderPlugin(),
         new HtmlWebpackPlugin({
             inject: true,

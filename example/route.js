@@ -1,0 +1,37 @@
+export default [
+    { meta: { title: '栅格' }, path: 'grid', component: () => import("./views/components/grid") },
+    { meta: { title: '段落' }, path: 'paragraph', component: () => import("./views/components/paragraph") },
+    { meta: { title: '顶部导航' }, path: 'navbar', component: () => import("./views/components/navbar") },
+    { meta: { title: '底部导航' }, path: 'tabbar', component: () => import("./views/components/tabbar") },
+    { meta: { title: '导航' }, path: 'nav', component: () => import("./views/components/nav") },
+
+    { meta: { title: '图标' }, path: 'icon', component: () => import("./views/components/icon") },
+    { meta: { title: '按钮' }, path: 'button', component: () => import("./views/components/button") },
+    { meta: { title: '进度' }, path: 'progress', component: () => import("./views/components/progress") },
+    { meta: { title: '标签' }, path: 'tag', component: () => import("./views/components/tag") },
+    { meta: { title: '面包屑' }, path: 'bread', component: () => import("./views/components/bread") },
+    { meta: { title: '图片' }, path: 'img', component: () => import("./views/components/img") },
+    // { meta: { title: '多级标题' }, path: 'title', component: () => import("./views/components/button") },
+    { meta: { title: '分割线' }, path: 'hr', component: () => import("./views/components/hr") },
+
+    { meta: { title: '输入框' }, path: 'input', component: () => import("./views/components/input") },
+    { meta: { title: '选择器' }, path: 'select', component: () => import("./views/components/select") },
+    { meta: { title: '单选' }, path: 'radio', component: () => import("./views/components/radio") },
+    { meta: { title: '多选' }, path: 'checkbox', component: () => import("./views/components/checkbox") },
+    { meta: { title: '开关' }, path: 'switch', component: () => import("./views/components/switch") },
+
+    { meta: { title: '过渡' }, path: 'transition', component: () => import("./views/components/transition") },
+    { meta: { title: '遮罩' }, path: 'mask', component: () => import("./views/components/mask") },
+    { meta: { title: '吐司' }, path: 'toast', component: () => import("./views/components/toast") },
+    { meta: { title: '弹出层' }, path: 'popup', component: () => import("./views/components/popup") },
+    { meta: { title: '提示' }, path: 'tip', component: () => import("./views/components/tip") },
+    // { meta: { title: '加载' }, path: 'loading', component: () => import("./views/components/loading") },
+    // { meta: { title: '确认' }, path: 'confirm', component: () => import("./views/components/confirm") },
+    // { meta: { title: '模态框' }, path: 'modal', component: () => import("./views/components/modal") },
+    // { meta: { title: '滚动监听' }, path: 'scrollspy', component: () => import("./views/components/scrollspy") },
+    // { meta: { title: '钉' }, path: 'pin', component: () => import("./views/components/pin") },
+    // { meta: { title: '回到顶部' }, path: 'top', component: () => import("./views/components/top") },
+    { meta: { title: '分页' }, path: 'page', component: () => import("./views/components/page") },
+    { meta: { title: '轮播' }, path: 'sliderbox', component: () => import("./views/components/sliderbox") },
+
+]
