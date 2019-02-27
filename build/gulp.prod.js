@@ -18,7 +18,7 @@ gulp.task('css', function () {
 
 // 字体
 gulp.task('fonts', function () {
-    return gulp.src('../styles/components/icon/fonts/*.*')
+    return gulp.src('../src/styles/components/icon/fonts/*.*')
         .pipe(gulp.dest('../dist/styles'));
 });
 
