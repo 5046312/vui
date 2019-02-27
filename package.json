@@ -1,6 +1,6 @@
 {
     "name": "vui-ui",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "description": "vue-ui, A growing UI Toolkit built on Vue.js.",
     "main": "dist/vui.min.js",
     "scripts": {

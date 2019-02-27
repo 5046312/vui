@@ -1,0 +1,66 @@
+<template>
+    <div>
+        <div>
+            <div>尺寸</div>
+            <div>
+                <v-img
+                    height="180px"
+                    width="180px"
+                    src="https://tse1-mm.cn.bing.net/th?id=OIP.XvIVgdja1iFse6HW1W2wcwHaEy&pid=Api"
+                />
+                <v-img
+                    height="180px"
+                    src="https://tse1-mm.cn.bing.net/th?id=OIP.XvIVgdja1iFse6HW1W2wcwHaEy&pid=Api"
+                />
+            </div>
+        </div>
+
+        <div>
+            <div>cover</div>
+            <div>
+                <v-img
+                    height="180px"
+                    width="180px"
+                    :cover="true"
+                    src="https://tse1-mm.cn.bing.net/th?id=OIP.XvIVgdja1iFse6HW1W2wcwHaEy&pid=Api"
+                />
+            </div>
+        </div>
+
+        <div>
+            <div>弧度</div>
+            <div>
+                <v-img
+                    height="180px"
+                    width="180px"
+                    :cover="true"
+                    radius="33px"
+                    src="https://tse1-mm.cn.bing.net/th?id=OIP.XvIVgdja1iFse6HW1W2wcwHaEy&pid=Api"
+                />
+                <v-img
+                    height="180px"
+                    width="180px"
+                    :cover="true"
+                    radius="122px"
+                    src="https://tse1-mm.cn.bing.net/th?id=OIP.XvIVgdja1iFse6HW1W2wcwHaEy&pid=Api"
+                />
+            </div>
+        </div>
+
+        <div>
+            <div>相册</div>
+            <div>
+                <v-img
+                    height="180px"
+                    width="180px"
+                    :cover="true"
+                    :thumb="true"
+                    src="https://tse1-mm.cn.bing.net/th?id=OIP.XvIVgdja1iFse6HW1W2wcwHaEy&pid=Api"
+                />
+            </div>
+        </div>
+    </div>
+</template>
+<script>
+export default {};
+</script>
