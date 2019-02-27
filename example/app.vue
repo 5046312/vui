@@ -19,7 +19,7 @@ export default {
     }
 };
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .layout {
     display: flex;
 }
@@ -40,5 +40,4 @@ li:hover {
     padding: 20px;
     box-sizing: border-box;
 }
-@import '../src/styles/index.scss'
 </style>
