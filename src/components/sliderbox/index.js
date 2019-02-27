@@ -1,3 +1,3 @@
-import Sliderbox from './src/sliderbox';
-import Slider from './src/slider';
+import Sliderbox from './sliderbox';
+import Slider from './slider';
 export { Sliderbox, Slider };

@@ -5,7 +5,7 @@ const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 module.exports = {
     mode: 'production',
     entry: {
-        app: './vui.js'
+        app: './src/vui.js'
     },
     output: {
         path: path.resolve(process.cwd(), './dist/'),

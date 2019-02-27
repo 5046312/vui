@@ -1,2 +1,2 @@
-import Switch from './src/switch';
+import Switch from './switch';
 export default Switch;

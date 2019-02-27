@@ -1,0 +1,18 @@
+<template>
+    <div class="vui-loading">
+        <div class="tip">{{msg}}</div>
+    </div>
+</template>
+<script>
+export default {
+    name: "v-loading",
+    data() {
+        return {
+            msg: ""
+        };
+    },
+    methods: {},
+    computed: {},
+    created() {}
+};
+</script>

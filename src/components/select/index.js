@@ -1,3 +1,3 @@
-import Select from './src/select';
-import Option from './src/option';
+import Select from './select';
+import Option from './option';
 export { Select, Option };

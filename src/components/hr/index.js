@@ -1,2 +1,2 @@
-import Hr from './src/hr';
+import Hr from './hr';
 export default Hr;

@@ -1,3 +1,3 @@
-import Tag from './src/tag';
-import Dot from './src/dot';
+import Tag from './tag';
+import Dot from './dot';
 export { Tag, Dot };

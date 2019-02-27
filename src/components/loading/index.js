@@ -1,10 +1,10 @@
 import Vue from 'vue';
-import Loading from './src/loading'
-import LoadingBar from './src/bar'
+import Loading from './loading'
+import LoadingBar from './bar'
 
 // loading bar
 class Bar {
-    constructor(){
+    constructor() {
         this.instance = null
     }
     static getInstance() {

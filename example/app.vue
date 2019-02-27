@@ -19,15 +19,26 @@ export default {
     }
 };
 </script>
-<style lang="scss" scoped>
+<style lang="scss">
 .layout {
     display: flex;
 }
 .layout > .menu {
     width: 200px;
+    cursor: pointer;
+    background: #f9f9f9;
+    margin: 0;
+}
+.menu > li {
+    padding: 10px;
+}
+li:hover {
+    color: #1e90ff;
 }
 .layout > .component {
     flex: 1;
-    padding: 50px;
+    padding: 20px;
+    box-sizing: border-box;
 }
+@import '../src/styles/index.scss'
 </style>

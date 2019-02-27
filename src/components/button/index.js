@@ -1,2 +1,2 @@
-import Button from './src/button';
+import Button from './button';
 export default Button;

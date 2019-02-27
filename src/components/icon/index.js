@@ -1,2 +1,2 @@
-import Icon from './src/icon';
+import Icon from './icon';
 export default Icon;

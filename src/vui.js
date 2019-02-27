@@ -1,8 +1,7 @@
-import './styles/base.scss';
 import Icon from './components/icon'
 import Button from './components/button'
 import Group from './components/group'
-import Layout from './components/layout'
+// import Layout from './components/layout'
 import { Row, Col } from './components/grid'
 import Transition from './components/transition'
 import Mask from './components/mask'
@@ -36,7 +35,7 @@ const install = Vue => {
     Vue.component(Icon.name, Icon)
     Vue.component(Button.name, Button)
     Vue.component(Group.name, Group)
-    Vue.component(Layout.name, Layout)
+    // Vue.component(Layout.name, Layout)
     Vue.component(Row.name, Row)
     Vue.component(Col.name, Col)
     Vue.component(Top.name, Top)

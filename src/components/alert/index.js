@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import Alert from './src/alert'
+import Alert from './alert'
 const AlertConstructor = Vue.extend(Alert);
 const instance = new AlertConstructor({
     el: document.createElement('div')
@@ -8,7 +8,6 @@ AlertConstructor.prototype.close = () => {
     const el = instance.$el;
     el.parentNode && el.parentNode.removeChild(el);
 }
-
 Vue.prototype.$alert = (msg = 'toast', duration = '2') => {
     instance.msg = msg;
     instance.duration = duration;

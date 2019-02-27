@@ -6,6 +6,9 @@ import VueRouter from 'vue-router';
 Vue.use(VueRouter)
 Vue.use(Vui);
 const router = new VueRouter({ routes })
+router.afterEach(() => {
+    window.scrollTo(0, 0)
+})
 new Vue({
     router,
     render: h => h(App)

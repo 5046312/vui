@@ -1,2 +1,2 @@
-import Group from './src/group';
+import Group from './group';
 export default Group;

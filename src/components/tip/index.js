@@ -1,2 +1,2 @@
-import Tip from './src/tip';
+import Tip from './tip';
 export default Tip;

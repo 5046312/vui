@@ -1,2 +1,2 @@
-import Progress from './src/progress';
+import Progress from 'progress';
 export default Progress;

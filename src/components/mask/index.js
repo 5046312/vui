@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import Mask from './src/mask'
+import Mask from './mask'
 
 let instance;
 function getInstance(callback) {

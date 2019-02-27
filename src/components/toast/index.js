@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import Toast from './src/toast'
+import Toast from './toast'
 
 let instance;
 let timer;

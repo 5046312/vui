@@ -1,3 +1,3 @@
-import Row from './src/row';
-import Col from './src/col';
+import Row from './row';
+import Col from './col';
 export { Row, Col }

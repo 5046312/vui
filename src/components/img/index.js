@@ -1,2 +1,2 @@
-import Img from './src/img';
+import Img from './img';
 export default Img;

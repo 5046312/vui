@@ -1,2 +1,2 @@
-import Scrollspy from './src/scrollspy';
+import Scrollspy from './scrollspy';
 export default Scrollspy;
