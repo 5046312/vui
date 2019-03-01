@@ -1,19 +1,19 @@
 @import "../common/var";
 .vui-radio{
-    display: inline-flex;
+    display: inline;
     align-items: center;
     justify-content: center;
     margin-right: 10px;
     user-select: none;
-    line-height: 1;
+    line-height: 20px;
     &>.radio{
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        border: 1px solid #eee;
-        border-radius: 20px;
-        height: 20px;
-        width: 20px;
+        // border: 1px solid #eee;
+        // border-radius: 20px;
+        // height: 20px;
+        // width: 20px;
         font-size: 12px;
         transition: all .1s;
         cursor: pointer;
@@ -24,7 +24,6 @@
         }
     }
     &>.label{
-        height: 20px;
         padding: 0 10px;
     }
 }

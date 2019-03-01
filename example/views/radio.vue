@@ -5,7 +5,7 @@
             <div>
                 <div style="margin-bottom: 10px;">已选择：{{value}}</div>
                 <div style="background: #aaa">
-                    <v-radio v-model="value" val="苹果">苹果</v-radio>
+                    <!-- <v-radio v-model="value" val="苹果">苹果</v-radio> -->
                     <v-radio v-model="value" val="梨">梨</v-radio>
                 </div>
             </div>
@@ -18,12 +18,10 @@ export default {
     data() {
         return {
             code: {},
-            value: "苹果",
+            value: "苹果"
         };
     },
-    methods: {
-        
-    }
+    methods: {}
 };
 </script>
 <style lang="scss" scoped>
