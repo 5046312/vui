@@ -1,2 +1,3 @@
 import Button from './button';
-export default Button;
+import Group from './group';
+export { Button , Group };

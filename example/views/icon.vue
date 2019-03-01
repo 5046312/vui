@@ -722,11 +722,7 @@
 export default {};
 </script>
 <style lang="scss" scoped>
-.v-icon {
-    & > .panel {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
+.panel {
+    font-size: 30px;
 }
 </style>

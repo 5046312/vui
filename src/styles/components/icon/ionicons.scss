@@ -1,14 +1,12 @@
-/*! Ionicons, v4.5.0 Created by Ben Sperry for the Ionic Framework, http://ionicons.com/ https://twitter.com/benjsperry https://twitter.com/ionicframework MIT License: https://github.com/driftyco/ionicons Android-style icons originally built by Google’s Material Design Icons: https://github.com/google/material-design-icons used under CC BY http://creativecommons.org/licenses/by/4.0/ Modified icons to fit ionicon’s grid from original.*/
 $ionicons-font-path: "../styles/components/icon/fonts";
-$ionicons-font-family: "Ionicons" !default;
-$ionicons-version: "4.5.0" !default;
 $ionicons-prefix: 'vui';
 
 @import 'ionicons-font.scss';
 @import 'ionicons-icons.scss';
 
 .vui-icon {
-    font-family: $ionicons-font-family;
+    display: inline-block;
+    font-family: "Ionicons";
     speak: none;
     font-style: normal;
     font-weight: normal;
@@ -18,12 +16,12 @@ $ionicons-prefix: 'vui';
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 1em;
-    width: 1em;
-    height: 1em;
-    margin: 0 auto;
-    // color: #333;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    &.load{
+        animation: load-loop 1s linear infinite;
+    }
+}
+@keyframes load-loop{
+    0%{transform:rotate(0)}
+    50%{transform:rotate(180deg)}
+    to{transform:rotate(1turn)}
 }

@@ -1,22 +1,46 @@
 @import '../common/var';
 @mixin activeColor($color){
-    &:active{
+    &.empty{
+        border-color: $color;
+        background: transparent;
+        color: $color;
+        &:active{
+            color: #eee;
+        }
+    }
+    &:not(.loading):active{
         background: rgba($color, .7);
     }
 }
 .vui-button{
-    display: inline-block;
     background: #eee;
     color: $font;
-    border-radius: 6px;
+    border-radius: 5px;
     outline:none;
     cursor: pointer;
     transition: all .1s;
     user-select: none;
     box-sizing: border-box;
+    padding: 10px 15px;
+    font-size: 1.0em;
+    &>.icon + span{
+        margin-left: 5px;
+    }
+    &.block{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    &.loading{
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        opacity: .5;
+        cursor: wait;
+    }
+    
     &>.content{
-        padding: .4em 1.1em;
-        font-size: 1.0em;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -26,53 +50,69 @@
     &.default{
         background: #fff;
         border: 1px solid #ddd;
-        @include activeColor(rgb(240, 240, 240));
+        @include activeColor(rgb(250, 250, 250));
     }
     &.cancel{
-        padding: 1px;
         background: #eee;
+        border: 1px solid #eee;
         @include activeColor(#eee);
     }
     &.primary{
-        padding: 1px;
         background: $primary;
+        border: 1px solid $primary;
         color: #fff;
         @include activeColor($primary);
     }
     &.success{
-        padding: 1px;
         background: $success;
+        border: 1px solid $success;
         color: #fff;
         @include activeColor($success);
     }
     &.danger{
-        padding: 1px;
         background: $danger;
+        border: 1px solid $danger;
         color: #fff;
         @include activeColor($danger);
     }
     &.warning{
-        padding: 1px;
         background: $warn;
+        border: 1px solid $warn;
         color: #fff;
         @include activeColor($warn);
     }
     &.error{
-        padding: 1px;
         background: $error;
+        border: 1px solid $error;
         color: #fff;
         @include activeColor($error);
     }
     &.info{
-        padding: 1px;
         background: $info;
+        border: 1px solid $info;
         color: #fff;
         @include activeColor($info);
     }
     &.disable{
-        padding: 1px;
         background: $disable;
+        border: 1px solid $disable;
         color: #f1f2f6;
         cursor: not-allowed; 
+    }
+}
+
+// 按钮组
+.vui-group{
+    display: flex;
+    box-sizing: border-box;
+    &>button{
+        margin: 0;
+        border-radius: 0;
+        &:first-child{
+            border-radius: 5px 0 0 5px;
+        }
+        &:last-child{
+            border-radius: 0 5px 5px 0;
+        }
     }
 }

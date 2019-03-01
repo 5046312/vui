@@ -7,9 +7,7 @@
 export default {
     name: "v-group",
     props: {
-        direction: {
-            default: "default"
-        }
+        direction: { default: "default" }
     }
 };
 </script>

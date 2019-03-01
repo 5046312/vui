@@ -3,14 +3,14 @@
         <span class='icon' :class='[type, size]'></span>
         <span class='text' v-if="text">
             <div class='on'>
-                <span v-if="text == 'cn'" style="padding-left: 5px;">开</span>
+                <span v-if="text == 'cn'">开</span>
                 <span v-if="text == 'en'">On</span>
-                <span v-if="text == 'icon'" style="padding-left: 3px;font-size: 32px;"><v-icon type="ios-checkmark"/></span>
+                <span v-if="text == 'icon'" style="font-size: 32px;"><v-icon type="ios-checkmark"/></span>
             </div>
             <div class='off'>
-                <span v-if="text == 'cn'" style="padding-left: 3px;">关</span>
+                <span v-if="text == 'cn'">关</span>
                 <span v-if="text == 'en'">Off</span>
-                <span v-if="text == 'icon'" style="padding-left: 3px;font-size: 32px;"><v-icon type="ios-close"/></span>
+                <span v-if="text == 'icon'" style="font-size: 32px;"><v-icon type="ios-close"/></span>
             </div>
         </span>
     </span>

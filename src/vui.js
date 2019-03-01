@@ -1,6 +1,5 @@
 import Icon from './components/icon'
-import Button from './components/button'
-import Group from './components/group'
+import { Button, Group } from './components/button'
 // import Layout from './components/layout'
 import { Row, Col } from './components/grid'
 import Transition from './components/transition'
