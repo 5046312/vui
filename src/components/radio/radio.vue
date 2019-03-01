@@ -3,9 +3,7 @@
         <span class='radio' :class="{active: value == val}">
             <v-icon type="ios-checkmark" v-if="value == val"/>
         </span>
-        <span class='label'>
-            <slot></slot>
-        </span>
+        <span class='label'><slot /></span>
     </span>
 </template>
 <script>
