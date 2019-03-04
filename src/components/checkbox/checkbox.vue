@@ -1,7 +1,7 @@
 <template>
     <span class="vui-checkbox" @click="checkHandle">
         <span class="checkbox" :class="{active: checked}">
-            <v-icon type="ios-checkmark" v-if="checked"/>
+            <v-icon type="ios-checkmark" class='icon' :class='{active: checked}'/>
         </span>
         <span class="label">
             <slot/>

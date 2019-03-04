@@ -3,6 +3,7 @@
     display: inline-flex;
     margin-right: 10px;
     user-select: none;
+    vertical-align: top;
     &>.checkbox{
         display: inline-flex;
         align-items: center;
@@ -11,15 +12,26 @@
         height: 20px;
         width: 20px;
         font-size: 26px;
-        transition: all .1s;
         cursor: pointer;
+        vertical-align: top;
+        transition: all .5s;
         &.active{
             color: #fff;
             background: $success;
             border-color: $success;
+            &>.icon{
+                transform: scale(1);
+            }
+        }
+        &>.icon{
+            color: #fff;
+            transition: all .2s;
+            transform: scale(0);
         }
     }
     &>.label{
+        vertical-align: top;
         padding: 0 10px;
+        line-height: 20px;
     }
 }
