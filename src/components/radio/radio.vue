@@ -1,9 +1,7 @@
 <template>
     <span class='vui-radio' @click="$emit('input', val)">
         <span class='radio' :class="{active: value == val}">
-            <div class='icon'>
-                <div class="round" :class="{active: value == val}"></div>
-            </div>
+            <div class='round'></div>
         </span>
         <span class='label'><slot /></span>
     </span>
