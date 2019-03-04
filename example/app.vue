@@ -3,6 +3,7 @@
         <ul class="menu">
             <router-link
                 :to="item.path"
+                :class="{active: $route.path == item.path}"
                 tag="li"
                 v-for="item in route"
                 :key="item.path"
@@ -31,6 +32,9 @@ export default {
 }
 .menu > li {
     padding: 10px;
+    &.active{
+        color: #1e90ff
+    }
 }
 li:hover {
     color: #1e90ff;
