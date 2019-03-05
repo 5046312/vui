@@ -10,9 +10,7 @@ export default {
     name: "v-loading-bar",
     props: {
         // bar高度
-        barHeight: {
-            default: 2
-        }
+        barHeight: { default: 2 }
     },
     data() {
         return {

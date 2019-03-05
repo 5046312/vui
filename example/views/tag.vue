@@ -36,17 +36,3 @@
         </div>
     </div>
 </template>
-<script>
-export default {
-    components: {},
-    data() {
-        return {
-            code: {},
-            percent: 0
-        };
-    },
-    methods: {}
-};
-</script>
-<style lang="scss" scoped>
-</style>

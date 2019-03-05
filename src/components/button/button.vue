@@ -1,6 +1,6 @@
 <template>
     <button class="vui-button" :class="buttonClass" @click="!loading && $emit('click')" :style="buttonStyle">
-        <v-icon class="icon" v-if="loading" type="md-refresh load"/>
+        <v-loading v-if="loading" class='icon' size="17" />
         <span class='content'>
             <slot></slot>
         </span>

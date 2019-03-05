@@ -1,67 +1,69 @@
 <template>
-    <div class='vui-progress' :style="progressStyle">
-        <div class='contain' :style="radiusStyle">
-            <div class='bar' :style="barStyle" :class='barClass'></div>
-            <div class='bg' :style="radiusStyle"></div>
+    <div class="vui-progress" :style="progressStyle">
+        <div class="contain" :style="radiusStyle">
+            <div class="bar" :style="barStyle" :class="barClass"></div>
+            <div class="bg" :style="radiusStyle"></div>
         </div>
-        <div class='percent' :class='{success: isComplete}' v-if="tip">
-            {{percentValue < 100 ? percentValue + '%' : '完成'}}
-        </div>
+        <div
+            class="percent"
+            :class="{success: isComplete}"
+            v-if="tip"
+        >{{percentValue < 100 ? percentValue + '%' : '完成'}}</div>
     </div>
 </template>
 <script>
 export default {
-    name: 'v-progress',
+    name: "v-progress",
     props: {
         // 颜色
         type: {
-            default: 'primary'
+            default: "primary"
         },
         // 粗细 px
         weight: {
-            default: 10,
+            default: 10
         },
         percent: {
-            default: 0,
+            default: 0
         },
         tip: {
-            default: false,
+            default: false
         }
     },
 
     computed: {
         // 100%进度
-        isComplete(){
-            return this.percentValue == 100
+        isComplete() {
+            return this.percentValue == 100;
         },
-        percentValue(){
-            if(this.percent < 0) return 0
-            if(this.percent > 100) return 100
-            return parseInt(this.percent)
+        percentValue() {
+            if (this.percent < 0) return 0;
+            if (this.percent > 100) return 100;
+            return parseInt(this.percent);
         },
-        progressStyle(){
+        progressStyle() {
             return {
-                height: this.weight + 'px',
-            }
+                height: this.weight + "px"
+            };
         },
-        barClass(){
+        barClass() {
             return {
                 success: this.isComplete,
-                warning: this.type == 'warning' && !this.isComplete,
-                error: this.type == 'error' && !this.isComplete,
-            }
+                warning: this.type == "warning" && !this.isComplete,
+                error: this.type == "error" && !this.isComplete
+            };
         },
-        barStyle(){
+        barStyle() {
             return {
-                borderRadius: this.weight + 'px',
-                width: this.percentValue + '%',
-            }
+                borderRadius: this.weight + "px",
+                width: this.percentValue + "%"
+            };
         },
-        radiusStyle(){
+        radiusStyle() {
             return {
-                borderRadius: this.weight + 'px'
-            }
+                borderRadius: this.weight + "px"
+            };
         }
     }
-}
+};
 </script>

@@ -25,7 +25,7 @@ export default [
     { meta: { title: '吐司' }, path: '/toast', component: () => import("./views/toast") },
     { meta: { title: '弹出层' }, path: '/popup', component: () => import("./views/popup") },
     { meta: { title: '提示' }, path: '/tip', component: () => import("./views/tip") },
-    // { meta: { title: '加载' }, path: '/loading', component: () => import("./views/loading") },
+    { meta: { title: '加载' }, path: '/loading', component: () => import("./views/loading") },
     // { meta: { title: '确认' }, path: '/confirm', component: () => import("./views/confirm") },
     // { meta: { title: '模态框' }, path: '/modal', component: () => import("./views/modal") },
     // { meta: { title: '滚动监听' }, path: '/scrollspy', component: () => import("./views/scrollspy") },

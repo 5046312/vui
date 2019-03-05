@@ -6,7 +6,7 @@ import Transition from './components/transition'
 import Mask from './components/mask'
 import Toast from './components/toast'
 import Alert from './components/alert'
-import { $bar } from './components/loading'
+import { $bar, Loading } from './components/loading'
 import Confirm from './components/confirm'
 import Modal from './components/modal'
 import Top from './components/top'
@@ -59,6 +59,7 @@ const install = Vue => {
     Vue.component(Option.name, Option)
     Vue.component(Tip.name, Tip)
     Vue.component(Input.name, Input)
+    Vue.component(Loading.name, Loading)
 }
 
 // auto install

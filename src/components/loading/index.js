@@ -24,4 +24,4 @@ class Bar {
 }
 const $bar = new Bar()
 Vue.prototype.$bar = $bar
-export { $bar };
+export { $bar, Loading };
